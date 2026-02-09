@@ -1,0 +1,950 @@
+Conversation ouverte. 1 message non lu.
+
+Aller au contenu
+Utiliser Gmail avec un lecteur d'écran
+1 sur 260
+Exemple
+Boîte de réception
+Rama Ka <ramaka947@gmail.com>
+Pièces jointes
+20:32 (il y a 1 minute)
+À moi
+
+Faites attention à ce message.
+Ce message contient une ou plusieurs pièces jointes que Gmail ne peut pas vérifier et qui pourraient être malveillantes. Ne téléchargez pas les pièces jointes, sauf si vous faites confiance à l'expéditeur et au message.
+
+Signaler comme spamLe message semble sûr
+
+ Une pièce jointe
+  •  Analysé par Gmail
+Le téléchargement de ce fichier a été désactivé. Si vous jugez que ce message est digne de confiance et souhaitez malgré tout télécharger le fichier, cliquez sur "Le message semble sûr" dans la bannière ci-dessus.
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode - Ebuy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #ec4899;
+            --accent: #f59e0b;
+            --success: #10b981;
+            --info: #06b6d4;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(236, 72, 153, 0.3);
+        }
+        
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(236, 72, 153, 0.1);
+        }
+        
+        .filter-btn.active {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .search-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(236, 72, 153, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            animation: fadeIn 0.3s;
+        }
+        
+        .search-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .gradient-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .gradient-rose {
+            background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .badge-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .product-card:hover .badge-overlay {
+            opacity: 1;
+        }
+        
+        .quick-view-btn {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover .quick-view-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .filter-sidebar {
+            max-height: calc(100vh - 200px);
+            overflow-y: auto;
+        }
+        
+        .filter-sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .filter-sidebar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .filter-sidebar::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 10px;
+        }
+        
+        .color-swatch {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .color-swatch:hover {
+            transform: scale(1.2);
+            border-color: #ec4899;
+        }
+        
+        .color-swatch.active {
+            border-color: #ec4899;
+            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="/" class="gradient-primary text-white font-bold text-2xl px-6 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
+                        ✨ Ebuy
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-2xl mx-8">
+                    <div class="relative">
+                        <input type="text" 
+                               placeholder="Rechercher dans Mode..." 
+                               class="w-full px-6 py-4 pr-28 border-2 border-pink-200 rounded-full focus:outline-none focus:border-pink-400 focus:ring-4 focus:ring-pink-100 transition-all shadow-sm">
+                        <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center space-x-2">
+                            <button onclick="openImageSearch()" 
+                                    class="gradient-secondary text-white p-3 rounded-full transition-all hover:scale-110 shadow-lg"
+                                    title="Recherche par image">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </button>
+                            <button class="bg-pink-600 hover:bg-pink-700 text-white px-5 py-3 rounded-full transition-all hover:scale-105 shadow-lg">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- User Actions -->
+                <div class="flex items-center space-x-6">
+                    <button class="flex flex-col items-center text-gray-700 hover:text-pink-600 transition-all hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                        </svg>
+                        <span class="text-xs mt-1 font-medium">Compte</span>
+                    </button>
+                    <button class="flex flex-col items-center text-gray-700 hover:text-pink-500 transition-all hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                        <span class="text-xs mt-1 font-medium">Favoris</span>
+                    </button>
+                    <button class="flex flex-col items-center text-gray-700 hover:text-pink-600 transition-all hover:scale-110 relative">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                        <span class="absolute -top-1 -right-1 gradient-secondary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold shadow-lg">3</span>
+                        <span class="text-xs mt-1 font-medium">Panier</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Breadcrumb -->
+        <div class="border-t border-pink-100 bg-gradient-to-r from-pink-50 to-rose-50">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex items-center space-x-2 text-sm">
+                    <a href="/" class="text-gray-600 hover:text-pink-600 transition">Accueil</a>
+                    <span class="text-gray-400">›</span>
+                    <span class="text-pink-600 font-semibold">Mode</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="relative gradient-secondary rounded-3xl overflow-hidden h-80 shadow-2xl">
+            <div class="absolute inset-0 flex items-center justify-between px-16 text-white">
+                <div class="max-w-lg">
+                    <h1 class="text-6xl font-bold mb-4 drop-shadow-lg">Mode & Style</h1>
+                    <p class="text-xl mb-6 text-pink-100">Découvrez les dernières tendances avec notre recherche par image 👗✨</p>
+                    <div class="flex space-x-4">
+                        <button onclick="openImageSearch()" class="bg-white text-pink-600 px-8 py-4 rounded-full font-bold hover:bg-pink-50 transition-all hover:scale-105 shadow-xl">
+                            📸 Rechercher par image
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-pink-600 transition-all">
+                            Voir les tendances
+                        </button>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="text-9xl opacity-20 animate-pulse">👗</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Filters -->
+    <section class="container mx-auto px-4 py-6">
+        <div class="flex items-center space-x-3 overflow-x-auto pb-2">
+            <button class="filter-btn active px-6 py-3 rounded-full bg-white text-gray-700 font-semibold shadow-md whitespace-nowrap">
+                ✨ Tous
+            </button>
+            <button class="filter-btn px-6 py-3 rounded-full bg-white text-gray-700 font-semibold hover:bg-pink-50 shadow-md whitespace-nowrap">
+                👚 Femmes
+            </button>
+            <button class="filter-btn px-6 py-3 rounded-full bg-white text-gray-700 font-semibold hover:bg-pink-50 shadow-md whitespace-nowrap">
+                👔 Hommes
+            </button>
+            <button class="filter-btn px-6 py-3 rounded-full bg-white text-gray-700 font-semibold hover:bg-pink-50 shadow-md whitespace-nowrap">
+                👶 Enfants
+            </button>
+            <button class="filter-btn px-6 py-3 rounded-full bg-white text-gray-700 font-semibold hover:bg-pink-50 shadow-md whitespace-nowrap">
+                👟 Chaussures
+            </button>
+            <button class="filter-btn px-6 py-3 rounded-full bg-white text-gray-700 font-semibold hover:bg-pink-50 shadow-md whitespace-nowrap">
+                👜 Accessoires
+            </button>
+            <button class="filter-btn px-6 py-3 rounded-full bg-white text-gray-700 font-semibold hover:bg-pink-50 shadow-md whitespace-nowrap">
+                💎 Bijoux
+            </button>
+            <button class="filter-btn px-6 py-3 rounded-full bg-white text-gray-700 font-semibold hover:bg-pink-50 shadow-md whitespace-nowrap">
+                🔥 Tendances
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="container mx-auto px-4 py-4">
+        <div class="grid grid-cols-12 gap-6">
+            <!-- Sidebar Filters -->
+            <aside class="col-span-12 lg:col-span-3">
+                <div class="bg-white rounded-2xl p-6 shadow-lg sticky top-24">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-bold text-gray-800">Filtres</h3>
+                        <button class="text-pink-600 text-sm font-semibold hover:underline">Réinitialiser</button>
+                    </div>
+                    
+                    <div class="filter-sidebar space-y-6">
+                        <!-- Price Range -->
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Prix</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 text-pink-600 rounded">
+                                    <span class="text-sm text-gray-700">Moins de 25€</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 text-pink-600 rounded">
+                                    <span class="text-sm text-gray-700">25€ - 50€</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 text-pink-600 rounded">
+                                    <span class="text-sm text-gray-700">50€ - 100€</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 text-pink-600 rounded">
+                                    <span class="text-sm text-gray-700">100€ - 200€</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 text-pink-600 rounded">
+                                    <span class="text-sm text-gray-700">Plus de 200€</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <hr class="border-gray-200">
+
+                        <!-- Colors -->
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Couleurs</h4>
+                            <div class="grid grid-cols-6 gap-2">
+                                <div class="color-swatch active" style="background: #000000;" title="Noir"></div>
+                                <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #e5e7eb;" title="Blanc"></div>
+                                <div class="color-swatch" style="background: #EF4444;" title="Rouge"></div>
+                                <div class="color-swatch" style="background: #3B82F6;" title="Bleu"></div>
+                                <div class="color-swatch" style="background: #10B981;" title="Vert"></div>
+                                <div class="color-swatch" style="background: #F59E0B;" title="Jaune"></div>
+                                <div class="color-swatch" style="background: #EC4899;" title="Rose"></div>
+                                <div class="color-swatch" style="background: #8B5CF6;" title="Violet"></div>
+                                <div class="color-swatch" style="background: #6B7280;" title="Gris"></div>
+                                <div class="color-swatch" style="background: #92400E;" title="Marron"></div>
+                                <div class="color-swatch" style="background: #06B6D4;" title="Cyan"></div>
+                                <div class="color-swatch" style="background: #F97316;" title="Orange"></div>
+                            </div>
+                        </div>
+
+                        <hr class="border-gray-200">
+
+                        <!-- Sizes -->
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Tailles</h4>
+                            <div class="grid grid-cols-4 gap-2">
+                                <button class="border-2 border-gray-300 rounded-lg py-2 text-sm font-semibold hover:border-pink-500 hover:text-pink-600 transition">XS</button>
+                                <button class="border-2 border-gray-300 rounded-lg py-2 text-sm font-semibold hover:border-pink-500 hover:text-pink-600 transition">S</button>
+                                <button class="border-2 border-pink-500 text-pink-600 rounded-lg py-2 text-sm font-semibold transition">M</button>
+                                <button class="border-2 border-gray-300 rounded-lg py-2 text-sm font-semibold hover:border-pink-500 hover:text-pink-600 transition">L</button>
+                                <button class="border-2 border-gray-300 rounded-lg py-2 text-sm font-semibold hover:border-pink-500 hover:text-pink-600 transition">XL</button>
+                                <button class="border-2 border-gray-300 rounded-lg py-2 text-sm font-semibold hover:border-pink-500 hover:text-pink-600 transition">XXL</button>
+                            </div>
+                        </div>
+
+                        <hr class="border-gray-200">
+
+                        <!-- Brands -->
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Marques</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 text-pink-600 rounded">
+                                    <span class="text-sm text-gray-700">Zara</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 text-pink-600 rounded">
+                                    <span class="text-sm text-gray-700">H&M</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 text-pink-600 rounded">
+                                    <span class="text-sm text-gray-700">Nike</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 text-pink-600 rounded">
+                                    <span class="text-sm text-gray-700">Adidas</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 text-pink-600 rounded">
+                                    <span class="text-sm text-gray-700">Gucci</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <hr class="border-gray-200">
+
+                        <!-- Rating -->
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Évaluation</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 text-pink-600 rounded">
+                                    <span class="text-sm text-gray-700 flex items-center">
+                                        <span class="text-amber-400 mr-1">★★★★★</span> (5)
+                                    </span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 text-pink-600 rounded">
+                                    <span class="text-sm text-gray-700 flex items-center">
+                                        <span class="text-amber-400 mr-1">★★★★☆</span> (4+)
+                                    </span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 text-pink-600 rounded">
+                                    <span class="text-sm text-gray-700 flex items-center">
+                                        <span class="text-amber-400 mr-1">★★★☆☆</span> (3+)
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Products Grid -->
+            <main class="col-span-12 lg:col-span-9">
+                <!-- Sort Bar -->
+                <div class="flex items-center justify-between mb-6">
+                    <p class="text-gray-700">
+                        <span class="font-bold text-pink-600">2,847</span> articles trouvés
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <select class="border-2 border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-pink-400">
+                            <option>Trier par: Pertinence</option>
+                            <option>Prix croissant</option>
+                            <option>Prix décroissant</option>
+                            <option>Nouveautés</option>
+                            <option>Meilleures ventes</option>
+                            <option>Mieux notés</option>
+                        </select>
+                        <div class="flex space-x-2">
+                            <button class="p-2 bg-pink-100 rounded-lg text-pink-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                                </svg>
+                            </button>
+                            <button class="p-2 bg-white rounded-lg text-gray-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Product 1 -->
+                    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md cursor-pointer group">
+                        <div class="relative overflow-hidden">
+                            <div class="bg-gradient-to-br from-pink-50 to-rose-100 h-80 flex items-center justify-center">
+                                <span class="text-8xl">👗</span>
+                            </div>
+                            <div class="badge-overlay"></div>
+                            <span class="absolute top-3 right-3 gradient-secondary text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">-30%</span>
+                            <button class="absolute top-3 left-3 bg-white rounded-full p-2 hover:bg-pink-50 transition-all hover:scale-110 shadow-md">
+                                <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </button>
+                            <button class="quick-view-btn absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-pink-600 px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-pink-600 hover:text-white transition">
+                                Vue rapide
+                            </button>
+                            <div class="absolute bottom-3 left-3 flex space-x-1">
+                                <div class="w-6 h-6 rounded-full bg-black border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-red-500 border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-blue-500 border-2 border-white"></div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-xs text-gray-500 mb-1">ZARA</p>
+                            <h3 class="font-semibold text-gray-800 mb-1 line-clamp-2">Robe d'été fleurie élégante</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-amber-400 text-sm">
+                                    ★★★★★
+                                </div>
+                                <span class="text-xs text-gray-500 ml-2">(523)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-lg font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">49€</span>
+                                    <span class="text-sm text-gray-400 line-through ml-2">70€</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 flex items-center text-xs text-gray-500">
+                                <span>S, M, L, XL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md cursor-pointer group">
+                        <div class="relative overflow-hidden">
+                            <div class="bg-gradient-to-br from-slate-100 to-slate-200 h-80 flex items-center justify-center">
+                                <span class="text-8xl">👚</span>
+                            </div>
+                            <div class="badge-overlay"></div>
+                            <span class="absolute top-3 right-3 bg-gradient-to-r from-emerald-400 to-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Nouveau</span>
+                            <button class="absolute top-3 left-3 bg-white rounded-full p-2 hover:bg-pink-50 transition-all hover:scale-110 shadow-md">
+                                <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </button>
+                            <button class="quick-view-btn absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-pink-600 px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-pink-600 hover:text-white transition">
+                                Vue rapide
+                            </button>
+                            <div class="absolute bottom-3 left-3 flex space-x-1">
+                                <div class="w-6 h-6 rounded-full bg-white border-2 border-gray-300"></div>
+                                <div class="w-6 h-6 rounded-full bg-gray-800 border-2 border-white"></div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-xs text-gray-500 mb-1">H&M</p>
+                            <h3 class="font-semibold text-gray-800 mb-1 line-clamp-2">T-shirt basique coton bio</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-amber-400 text-sm">
+                                    ★★★★☆
+                                </div>
+                                <span class="text-xs text-gray-500 ml-2">(187)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-lg font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">19€</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 flex items-center text-xs text-gray-500">
+                                <span>XS, S, M, L, XL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md cursor-pointer group">
+                        <div class="relative overflow-hidden">
+                            <div class="bg-gradient-to-br from-blue-50 to-indigo-100 h-80 flex items-center justify-center">
+                                <span class="text-8xl">👖</span>
+                            </div>
+                            <div class="badge-overlay"></div>
+                            <button class="absolute top-3 left-3 bg-white rounded-full p-2 hover:bg-pink-50 transition-all hover:scale-110 shadow-md">
+                                <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </button>
+                            <button class="quick-view-btn absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-pink-600 px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-pink-600 hover:text-white transition">
+                                Vue rapide
+                            </button>
+                            <div class="absolute bottom-3 left-3 flex space-x-1">
+                                <div class="w-6 h-6 rounded-full bg-blue-600 border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-black border-2 border-white"></div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-xs text-gray-500 mb-1">LEVI'S</p>
+                            <h3 class="font-semibold text-gray-800 mb-1 line-clamp-2">Jean slim fit délavé</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-amber-400 text-sm">
+                                    ★★★★★
+                                </div>
+                                <span class="text-xs text-gray-500 ml-2">(892)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-lg font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">89€</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 flex items-center text-xs text-gray-500">
+                                <span>28, 30, 32, 34, 36</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md cursor-pointer group">
+                        <div class="relative overflow-hidden">
+                            <div class="bg-gradient-to-br from-purple-50 to-fuchsia-100 h-80 flex items-center justify-center">
+                                <span class="text-8xl">👜</span>
+                            </div>
+                            <div class="badge-overlay"></div>
+                            <span class="absolute top-3 right-3 bg-gradient-to-r from-blue-400 to-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Top vente</span>
+                            <button class="absolute top-3 left-3 bg-white rounded-full p-2 hover:bg-pink-50 transition-all hover:scale-110 shadow-md">
+                                <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </button>
+                            <button class="quick-view-btn absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-pink-600 px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-pink-600 hover:text-white transition">
+                                Vue rapide
+                            </button>
+                            <div class="absolute bottom-3 left-3 flex space-x-1">
+                                <div class="w-6 h-6 rounded-full bg-rose-600 border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-amber-900 border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-black border-2 border-white"></div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-xs text-gray-500 mb-1">GUCCI</p>
+                            <h3 class="font-semibold text-gray-800 mb-1 line-clamp-2">Sac à main cuir luxe</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-amber-400 text-sm">
+                                    ★★★★★
+                                </div>
+                                <span class="text-xs text-gray-500 ml-2">(345)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-lg font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">450€</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 flex items-center text-xs text-gray-500">
+                                <span>Taille unique</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md cursor-pointer group">
+                        <div class="relative overflow-hidden">
+                            <div class="bg-gradient-to-br from-orange-50 to-amber-100 h-80 flex items-center justify-center">
+                                <span class="text-8xl">👟</span>
+                            </div>
+                            <div class="badge-overlay"></div>
+                            <span class="absolute top-3 right-3 gradient-secondary text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">-20%</span>
+                            <button class="absolute top-3 left-3 bg-white rounded-full p-2 hover:bg-pink-50 transition-all hover:scale-110 shadow-md">
+                                <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </button>
+                            <button class="quick-view-btn absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-pink-600 px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-pink-600 hover:text-white transition">
+                                Vue rapide
+                            </button>
+                            <div class="absolute bottom-3 left-3 flex space-x-1">
+                                <div class="w-6 h-6 rounded-full bg-white border-2 border-gray-300"></div>
+                                <div class="w-6 h-6 rounded-full bg-black border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-red-600 border-2 border-white"></div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-xs text-gray-500 mb-1">NIKE</p>
+                            <h3 class="font-semibold text-gray-800 mb-1 line-clamp-2">Baskets Air Max sport</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-amber-400 text-sm">
+                                    ★★★★☆
+                                </div>
+                                <span class="text-xs text-gray-500 ml-2">(654)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-lg font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">120€</span>
+                                    <span class="text-sm text-gray-400 line-through ml-2">150€</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 flex items-center text-xs text-gray-500">
+                                <span>38-45</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md cursor-pointer group">
+                        <div class="relative overflow-hidden">
+                            <div class="bg-gradient-to-br from-emerald-50 to-green-100 h-80 flex items-center justify-center">
+                                <span class="text-8xl">🧥</span>
+                            </div>
+                            <div class="badge-overlay"></div>
+                            <button class="absolute top-3 left-3 bg-white rounded-full p-2 hover:bg-pink-50 transition-all hover:scale-110 shadow-md">
+                                <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </button>
+                            <button class="quick-view-btn absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-pink-600 px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-pink-600 hover:text-white transition">
+                                Vue rapide
+                            </button>
+                            <div class="absolute bottom-3 left-3 flex space-x-1">
+                                <div class="w-6 h-6 rounded-full bg-green-700 border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-gray-800 border-2 border-white"></div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-xs text-gray-500 mb-1">ZARA</p>
+                            <h3 class="font-semibold text-gray-800 mb-1 line-clamp-2">Veste en cuir véritable</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-amber-400 text-sm">
+                                    ★★★★★
+                                </div>
+                                <span class="text-xs text-gray-500 ml-2">(412)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-lg font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">199€</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 flex items-center text-xs text-gray-500">
+                                <span>S, M, L, XL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md cursor-pointer group">
+                        <div class="relative overflow-hidden">
+                            <div class="bg-gradient-to-br from-yellow-50 to-amber-100 h-80 flex items-center justify-center">
+                                <span class="text-8xl">👠</span>
+                            </div>
+                            <div class="badge-overlay"></div>
+                            <span class="absolute top-3 right-3 gradient-secondary text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">-40%</span>
+                            <button class="absolute top-3 left-3 bg-white rounded-full p-2 hover:bg-pink-50 transition-all hover:scale-110 shadow-md">
+                                <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </button>
+                            <button class="quick-view-btn absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-pink-600 px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-pink-600 hover:text-white transition">
+                                Vue rapide
+                            </button>
+                            <div class="absolute bottom-3 left-3 flex space-x-1">
+                                <div class="w-6 h-6 rounded-full bg-black border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-red-600 border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-pink-400 border-2 border-white"></div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-xs text-gray-500 mb-1">CHARLES & KEITH</p>
+                            <h3 class="font-semibold text-gray-800 mb-1 line-clamp-2">Escarpins talons hauts élégants</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-amber-400 text-sm">
+                                    ★★★★☆
+                                </div>
+                                <span class="text-xs text-gray-500 ml-2">(276)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-lg font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">60€</span>
+                                    <span class="text-sm text-gray-400 line-through ml-2">100€</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 flex items-center text-xs text-gray-500">
+                                <span>36-41</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md cursor-pointer group">
+                        <div class="relative overflow-hidden">
+                            <div class="bg-gradient-to-br from-cyan-50 to-blue-100 h-80 flex items-center justify-center">
+                                <span class="text-8xl">🧢</span>
+                            </div>
+                            <div class="badge-overlay"></div>
+                            <span class="absolute top-3 right-3 bg-gradient-to-r from-emerald-400 to-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Nouveau</span>
+                            <button class="absolute top-3 left-3 bg-white rounded-full p-2 hover:bg-pink-50 transition-all hover:scale-110 shadow-md">
+                                <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </button>
+                            <button class="quick-view-btn absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-pink-600 px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-pink-600 hover:text-white transition">
+                                Vue rapide
+                            </button>
+                            <div class="absolute bottom-3 left-3 flex space-x-1">
+                                <div class="w-6 h-6 rounded-full bg-black border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-blue-600 border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-white border-2 border-gray-300"></div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-xs text-gray-500 mb-1">ADIDAS</p>
+                            <h3 class="font-semibold text-gray-800 mb-1 line-clamp-2">Casquette streetwear logo</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-amber-400 text-sm">
+                                    ★★★★★
+                                </div>
+                                <span class="text-xs text-gray-500 ml-2">(198)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-lg font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">25€</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 flex items-center text-xs text-gray-500">
+                                <span>Taille unique</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex items-center justify-center space-x-2 mt-12">
+                    <button class="px-4 py-2 border-2 border-gray-300 rounded-full hover:border-pink-500 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <button class="px-4 py-2 gradient-secondary text-white font-semibold rounded-full">1</button>
+                    <button class="px-4 py-2 border-2 border-gray-300 rounded-full hover:border-pink-500 transition">2</button>
+                    <button class="px-4 py-2 border-2 border-gray-300 rounded-full hover:border-pink-500 transition">3</button>
+                    <button class="px-4 py-2 border-2 border-gray-300 rounded-full hover:border-pink-500 transition">4</button>
+                    <span class="px-2">...</span>
+                    <button class="px-4 py-2 border-2 border-gray-300 rounded-full hover:border-pink-500 transition">24</button>
+                    <button class="px-4 py-2 border-2 border-gray-300 rounded-full hover:border-pink-500 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- Image Search Modal -->
+    <div id="imageSearchModal" class="search-modal">
+        <div class="bg-white rounded-3xl p-8 max-w-lg w-full mx-4 shadow-2xl">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-3xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">Recherche par image</h3>
+                <button onclick="closeImageSearch()" class="text-gray-500 hover:text-pink-600 transition-all hover:rotate-90 duration-300">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="space-y-4">
+                <button class="w-full border-2 border-dashed border-pink-300 rounded-2xl p-8 hover:border-pink-500 hover:bg-pink-50 transition-all hover:scale-105 text-center group">
+                    <div class="gradient-secondary w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <p class="font-bold text-gray-800 text-lg">📸 Prendre une photo</p>
+                    <p class="text-sm text-gray-600 mt-2">Photographiez l'article que vous recherchez</p>
+                </button>
+                
+                <button class="w-full border-2 border-dashed border-rose-300 rounded-2xl p-8 hover:border-rose-500 hover:bg-rose-50 transition-all hover:scale-105 text-center group">
+                    <div class="bg-gradient-to-br from-rose-400 to-pink-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <p class="font-bold text-gray-800 text-lg">🖼️ Importer une image</p>
+                    <p class="text-sm text-gray-600 mt-2">Choisissez depuis votre galerie</p>
+                </button>
+            </div>
+            
+            <div class="mt-6 p-5 bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl border border-pink-100">
+                <p class="text-sm text-pink-800">
+                    💡 <strong>Conseil mode :</strong> Pour de meilleurs résultats, photographiez l'article sur fond neutre avec une bonne lumière.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 via-pink-900 to-rose-900 text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="gradient-primary text-white font-bold text-2xl px-6 py-3 rounded-2xl shadow-lg inline-block mb-4">
+                        ✨ Ebuy
+                    </div>
+                    <p class="text-gray-300 text-sm">Votre destination mode avec recherche par image</p>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4 text-pink-300">Shopping</h5>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition">Mode femme</a></li>
+                        <li><a href="#" class="hover:text-white transition">Mode homme</a></li>
+                        <li><a href="#" class="hover:text-white transition">Mode enfant</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4 text-pink-300">Aide</h5>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition">Guide des tailles</a></li>
+                        <li><a href="#" class="hover:text-white transition">Retours gratuits</a></li>
+                        <li><a href="#" class="hover:text-white transition">Service client</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4 text-pink-300">Suivez-nous</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-white bg-opacity-10 p-3 rounded-full hover:bg-opacity-20 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="bg-white bg-opacity-10 p-3 rounded-full hover:bg-opacity-20 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="bg-white bg-opacity-10 p-3 rounded-full hover:bg-opacity-20 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-pink-800 mt-8 pt-8 text-center text-sm text-gray-300">
+                <p>&copy; 2026 Ebuy Mode. Tous droits réservés. Fait avec 💖</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openImageSearch() {
+            document.getElementById('imageSearchModal').classList.add('active');
+        }
+        
+        function closeImageSearch() {
+            document.getElementById('imageSearchModal').classList.remove('active');
+        }
+        
+        // Close modal on background click
+        document.getElementById('imageSearchModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeImageSearch();
+            }
+        });
+
+        // Filter buttons interactivity
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Color swatches interactivity
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
+ebuy-mode-page.html
+Affichage de ebuy-mode-page.html en cours...
