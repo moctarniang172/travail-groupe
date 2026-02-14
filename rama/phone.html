@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+<body>
+   <header class="m-4 flex justify-between items-center h-[10vh]">
+    <!--logo-->
+    <div class="text-2xl font-bold text-purple-600">
+      Ebuy
+    </div>
+
+    <!--bare de recherche-->
+    <nav class="flex items-center w-[50%] bg-white rounded-full border border-2">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Rechercher des produits......." class="w-[100%] h-[5vh] bg-white border rounded-full">
+    </nav>
+
+    <!--les icones-->
+    <div class="flex items-center gap-4 me-4">
+       <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+       <a 
+  href="../moctar/connexion.html"
+  class="px-5 py-2 border border-gray-300 rounded-lg font-medium hover:bg-bleu hover:text-white transition duration-300">
+  Connexion
+</a>
+
+
+        <a href="../moctar/inscription.html"
+  class="inline-block px-6 py-2 bg-bleu  text-white font-medium rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition duration-300 text-center">
+  Inscription
+</a>
+
+    </div>
+  </header>
+  <main>
+    <div class="flex gap-6">
+        <a href="">Tout</a>
+        <a href="">Elctronique</a>
+        <a href="">Mode</a>
+        <a href="">Maison</a>
+        <a href="">Sport</a>
+    </div>
+    <!-- partie de rama-->
+
+
+    <section>
+
+      <div class="p-6 transition cursor-pointer xl:overscroll-contain overscroll-contain m-6 whitespace-nowrap">
+        <nav class="flex space-evenly gap- overflow-x-auto py-2 text-center">
+          <a href="categorie_electroniques.html" class="bg-white hover:bg-blue-500 hover:text-white m-2 p-2 border rounded-2xl">Tous</a>
+          <a href="phone.html" class="bg-blue-500 text-white w-[250px] m-2 p-2 border rounded-2xl">Smartphones</a>
+          <a href="ordinateurs.html" class="bg-white hover:bg-blue-500 hover:text-white w-[250px] m-2 p-2 border rounded-2xl">Ordinateurs</a>
+          <a href="gaming.html" class="bg-white hover:bg-blue-500 hover:text-white w-[250px] m-2 p-2 border rounded-2xl">Gaming</a>
+          <a href="audio.html" class="bg-white hover:bg-blue-500 hover:text-white w-[250px] m-2 p-2 border rounded-2xl">Audio</a>
+          <a href="tv&vidéo.html" class="bg-white hover:bg-blue-500 hover:text-white w-[250px] m-2 p-2 border rounded-2xl">TV & VIDÉO</a>
+          <a href="photo.html" class="bg-white hover:bg-blue-500 hover:text-white w-[250px] m-2 p-2 border rounded-2xl">Photo & Vidéo</a>
+          <a href="objets-connectes.html" class="bg-white hover:bg-blue-500 hover:text-white w-[250px] m-2 p-2 border rounded-2xl">Objets connectées</a>
+          <a href="accessoires.html" class="bg-white hover:bg-blue-500 hover:text-white w-[250px] m-2 p-2 border rounded-2xl">Accessoires</a>
+        </nav>
+      </div>
+
+
+      <!-- CHANGEMENT ICI : gap-6 pour espace entre sidebar et produits -->
+      <div class="flex flex-col md:flex-row gap-6 p-8">
+
+        <!-- SIDEBAR - LARGEUR FIXE RÉDUITE -->
+        <div class="bg-white rounded-2xl p-6 shadow-xl hover:shadow-lg transition cursor-pointer w-full md:w-72 lg:w-80 flex-shrink-0">
+
+          <div class="flex justify-between items-center mb-4 sticky top-0 z-10 bg-white">
+            <h1 class="text-2xl font-bold">Filtres</h1>
+            <button class="bg-blue-500 text-white px-3 py-2 border border-blue-900 rounded-2xl text-sm">Réinitialiser</button>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">💰 Prix</h2>
+            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> Moins de 200 $</label>
+            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> 100$ - 300$</label>
+            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> 300$ - 600$</label>
+            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> 600$ - 1000$</label>
+            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> Plus de 1000$</label>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">🔖 Marques</h2>
+            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Apple (456)</label>
+            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Samsung (389)</label>
+            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Xiaomi (234)</label>
+            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Google (89)</label>
+            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> OPPO (54)</label>
+            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Huawei</label>
+            <div>
+              <button class="text-blue-500 hover:underline mt-2">+ Voir plus</button>
+            </div>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">Stockage</h2>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="stockage" class="m-2"> 64 GB</label>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="stockage" class="m-2"> 128 GB</label>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="stockage" class="m-2"> 256 GB</label>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="stockage" class="m-2"> 512 GB</label>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="stockage" class="m-2"> 1 TB</label>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold"> RAM</h2>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> 4 GB</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> 6 GB</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> 8 GB</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> 12 GB</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> 16 GB et plus</label>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">Taille d'écran</h2>
+            <label class="text-purple-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> 5.5 pouces et moins</label>
+            <label class="text-purple-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> 5.5 - 6.5 pouces</label>
+            <label class="text-purple-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> 6.5 - 7.5 pouces</label>
+            <label class="text-purple-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> 7.5 - 8.5 pouces</label>
+            <label class="text-purple-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> Plus de 8.5 pouces</label>
+          </div>
+
+          <div  class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">Type d'écran</h2>
+            <label class="text-pink-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> LCD</label>
+            <label class="text-pink-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> OLED</label>
+            <label class="text-pink-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> AMOLED</label>
+            <label class="text-pink-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> Super AMOLED</label>
+            <label class="text-pink-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> LTPO</label>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">Réseau</h2>
+            <label class="text-blue-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> 4G</label>
+            <label class="text-blue-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> 5G</label>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">Système d'exploitation</h2>
+            <label class="text-red-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> Android</label>
+            <label class="text-red-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> iOS</label>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">⭐ Evaluation</h2>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="evaluation" class="m-2"> ★★★★★ (5)</label>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="evaluation" class="m-2"> ★★★★☆ (4+)</label>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="evaluation" class="m-2"> ★★★☆☆ (3+)</label>
+          </div>
+
+        </div>
+
+
+        <!-- ZONE PRODUITS - PREND L'ESPACE RESTANT -->
+        <div class="flex-1">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Product Card -->
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur Portable XYZ</h3>
+              <p class="text-gray-600 mt-2">Marque ABC - 16GB RAM - 512GB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$999.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+          </div>
+
+
+          <!-- PAGINATION -->
+          <div class="flex justify-center mt-8">
+            <div class="flex items-center text-gray-600">
+              <div class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">&lt;</div>
+              <span class="p-4 m-2 border border-blue-500 bg-blue-500 text-white rounded-full cursor-pointer">1</span>
+              <span class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">2</span>
+              <span class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">3</span>
+              <span class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">4</span>
+              <span class="p-4 m-2 cursor-pointer">...</span>
+              <span class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">42</span>
+              <div class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">&gt;</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+<!-- FOOTER -->
+<footer class="bg-footer text-noire">
+  
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <div>
+        <h1 class="text-2xl font-bold mb-3">À propos d'Ebuy</h1>
+        <p class="text-[15px] text-noire">
+          Plateforme e-commerce innovante avec recherche par image et expérience immersive.
+        </p>
+      </div>
+
+      <div>
+        <h1 class="text-2xl font-bold mb-3">Service Client</h1>
+        <p class="text-[15px] text-noire">
+          Assistance, retours, livraison et support 24/7.
+        </p>
+      </div>
+
+      <div>
+        <h1 class="text-2xl font-bold mb-3">Liens Rapides</h1>
+        <p class="text-[15px] text-noire">
+          Produits, catégories, promotions, nouveautés.
+        </p>
+      </div>
+
+      <div>
+        <h1 class="text-2xl font-bold mb-3">Suivez-nous</h1>
+       <div class="flex gap-4 mt-3">
+       <i class="fa-brands fa-facebook"></i>
+       <i class="fa-brands fa-instagram"></i>
+       <i class="fa-brands fa-twitter"></i>
+      </div>
+
+      </div>
+
+    </div>
+
+    <hr class="my-8 border-gray-600">
+
+    <p class="text-center text-sm text-gray-400">
+      © 2026 Ebuy. Tous droits réservés.
+    </p>
+
+  </div>
+
+</footer>
+<script src="../index.js"></script>
+
+</body>
+</html>
