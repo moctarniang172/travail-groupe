@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catégorie Ordinateurs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Scrollbar personnalisée pour la navigation */
+        .custom-scrollbar-nav::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .custom-scrollbar-nav::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .custom-scrollbar-nav::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 10px;
+        }
+        
+        .custom-scrollbar-nav::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
+
+        /* Scrollbar personnalisée pour la sidebar */
+        .custom-scrollbar-sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .custom-scrollbar-sidebar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .custom-scrollbar-sidebar::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 10px;
+        }
+        
+        .custom-scrollbar-sidebar::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
+
+        /* Pour Firefox */
+        .custom-scrollbar-nav,
+        .custom-scrollbar-sidebar {
+            scrollbar-width: thin;
+            scrollbar-color: #3b82f6 #f1f1f1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <section>
+
+      <!-- NAVIGATION AVEC SCROLLBAR VISIBLE -->
+      <div class="p-6 m-6">
+        <nav class="flex gap-4 overflow-x-auto py-2 custom-scrollbar-nav">
+          <a href="categorie_Ordinateurs.html" class="bg-blue-500 text-white px-6 py-2 border rounded-2xl whitespace-nowrap hover:bg-blue-600 transition">Tous</a>
+          <a href="phone.html" class="bg-white px-6 py-2 border rounded-2xl whitespace-nowrap hover:bg-gray-100 transition">Smartphones</a>
+          <a href="ordinateurs.html" class="bg-white px-6 py-2 border rounded-2xl whitespace-nowrap hover:bg-gray-100 transition">Ordinateurs</a>
+          <a href="gaming.html" class="bg-white px-6 py-2 border rounded-2xl whitespace-nowrap hover:bg-gray-100 transition">Gaming</a>
+          <a href="audio.html" class="bg-white px-6 py-2 border rounded-2xl whitespace-nowrap hover:bg-gray-100 transition">Audio</a>
+          <a href="photo.html" class="bg-white px-6 py-2 border rounded-2xl whitespace-nowrap hover:bg-gray-100 transition">Photo & Vidéo</a>
+          <a href="montre.html" class="bg-white px-6 py-2 border rounded-2xl whitespace-nowrap hover:bg-gray-100 transition">Montres connectées</a>
+          <a href="" class="bg-white px-6 py-2 border rounded-2xl whitespace-nowrap hover:bg-gray-100 transition">Offres flash</a>
+        </nav>
+      </div>
+
+
+      <div class="flex flex-col md:flex-row gap-6 p-8">
+
+        <!-- SIDEBAR AVEC SCROLLBAR VISIBLE -->
+        <div class="bg-white rounded-2xl p-6 shadow-xl w-full md:w-72 lg:w-80 flex-shrink-0 max-h-screen overflow-y-auto custom-scrollbar-sidebar">
+
+          <div class="sticky top-0 z-10 bg-white pb-4">
+            <div class="flex justify-between items-center">
+              <h1 class="text-2xl font-bold">Filtres</h1>
+              <button class="bg-blue-500 text-white px-3 py-2 border border-blue-900 rounded-2xl text-sm hover:bg-blue-600 transition">Réinitialiser</button>
+            </div>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">💰 Prix</h2>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="prix" class="m-2"> Moins de 100 $
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="prix" class="m-2"> 100$ - 300$
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="prix" class="m-2"> 300$ - 600$
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="prix" class="m-2"> 600$ - 1000$
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="prix" class="m-2"> Plus de 1000$
+            </label>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">🔖 Marques</h2>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="marque" class="m-2"> Apple
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="marque" class="m-2"> Samsung
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="marque" class="m-2"> Dell
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="marque" class="m-2"> HP
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="marque" class="m-2"> Lenovo
+            </label>
+            <div>
+              <button class="text-blue-500 hover:underline mt-2 ml-2">Voir plus</button>
+            </div>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">⭐ Evaluation</h2>
+            <label class="text-yellow-500 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="evaluation" class="m-2"> ★★★★★ (5)
+            </label>
+            <label class="text-yellow-500 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="evaluation" class="m-2"> ★★★★☆ (4+)
+            </label>
+            <label class="text-yellow-500 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="evaluation" class="m-2"> ★★★☆☆ (3+)
+            </label>
+          </div>
+
+          <!-- Sections supplémentaires pour tester le scroll -->
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">💾 Stockage</h2>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="stockage" class="m-2"> 256GB
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="stockage" class="m-2"> 512GB
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="stockage" class="m-2"> 1TB
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="stockage" class="m-2"> 2TB+
+            </label>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">🖥️ Processeur</h2>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="processeur" class="m-2"> Intel Core i5
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="processeur" class="m-2"> Intel Core i7
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="processeur" class="m-2"> Intel Core i9
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="processeur" class="m-2"> AMD Ryzen 5
+            </label>
+            <label class="cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+              <input type="checkbox" name="processeur" class="m-2"> AMD Ryzen 7
+            </label>
+          </div>
+
+        </div>
+
+
+        <!-- ZONE PRODUITS -->
+        <div class="flex-1">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <!-- Product Cards -->
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur Portable XYZ</h3>
+              <p class="text-gray-600 mt-2">Marque ABC - 16GB RAM - 512GB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$999.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+          </div>
+
+          <!-- PAGINATION -->
+          <div class="flex justify-center mt-8">
+            <div class="flex items-center text-gray-600">
+              <div class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">&lt;</div>
+              <span class="p-4 m-2 border border-blue-500 bg-blue-500 text-white rounded-full cursor-pointer">1</span>
+              <span class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">2</span>
+              <span class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">3</span>
+              <span class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">4</span>
+              <span class="p-4 m-2 cursor-pointer">...</span>
+              <span class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">42</span>
+              <div class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">&gt;</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+</body>
+</html>

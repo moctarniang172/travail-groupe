@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <title>Ebuy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center gap-4">
+      <!-- Logo -->
+      <div class="text-2xl font-bold text-purple-600"> Ebuy</div>
+
+      <!-- Search -->
+      <div class="flex-1 relative">
+        <input type="text" placeholder="Rechercher un produit..."
+          class="w-full rounded-full border px-5 py-2 focus:outline-none" />
+        <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-purple-600 text-white px-4 py-1 rounded-full">
+          <i class="fa-regular fa-camera"></i>
+        </button>
+        <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-purple-600 text-white px-4 py-1 rounded-full">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+      </div>
+
+      <!-- Icons -->
+      <div class="flex gap-4 text-gray-600">
+        <i class="fa-solid fa-user"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <nav class="border-t">
+      <ul class="max-w-7xl mx-auto px-4 flex gap-6 py-3 text-sm text-gray-700">
+        <li class="text-purple-600 font-semibold">Toutes les catégories</li>
+        <li>Électronique</li>
+        <li>Mode</li>
+        <li>Sports & Loisirs</li>
+        <li>Beauté & Santé</li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PRODUCTS -->
+  <main class="max-w-7xl mx-auto px-4 py-10">
+    <!-- HERO -->
+    <section class="max-w-7xl mx-auto px-4 mt-6">
+      <div
+        class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-fuchsia-600 p-10 md:p-16 text-white shadow-xl">
+        <div class="max-w-xl">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+            Trouvez exactement <br />
+            ce que vous cherchez
+          </h1>
+
+          <p class="mt-6 text-lg text-white/90">
+            Recherchez par image et découvrez des produits similaires instantanément
+          </p>
+
+          <button
+            class="mt-8 inline-flex items-center gap-2 bg-white text-purple-600 font-semibold px-6 py-3 rounded-full shadow hover:scale-105 transition">
+            Essayer maintenant
+          </button>
+        </div>
+
+        <!-- Camera Icon -->
+        <div class="absolute right-8 top-1/2 -translate-y-1/2 hidden md:block opacity-30">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-56 h-56" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-width="1.5" d="M3 7h3l2-3h8l2 3h3v13H3V7z" />
+            <circle cx="12" cy="13" r="3.5" />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- CATEGORIES -->
+    <section class="max-w-7xl mx-auto px-4 mt-16 mb-12">
+      <h2 class="text-2xl font-bold text-purple-600 mb-8">
+        Explorez par catégorie
+      </h2>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6  gap-6">
+
+        <!-- Category -->
+        <div class="bg-white rounded-2xl p-6 text-center shadow hover:shadow-lg transition cursor-pointer">
+          <div
+            class="mx-auto mb-4 w-14 h-14 flex items-center justify-center rounded-xl bg-blue-500 text-white text-2xl">
+            <i class="fa-solid fa-mobile"></i>
+          </div>
+          <p class="font-semibold">Smartphones</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 text-center shadow hover:shadow-lg transition cursor-pointer">
+          <div
+            class="mx-auto mb-4 w-14 h-14 flex items-center justify-center rounded-xl bg-purple-500 text-white text-2xl">
+            <i class="fa-solid fa-laptop"></i>
+          </div>
+          <p class="font-semibold">Ordinateurs</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 text-center shadow hover:shadow-lg transition cursor-pointer">
+          <div
+            class="mx-auto mb-4 w-14 h-14 flex items-center justify-center rounded-xl bg-pink-500 text-white text-2xl">
+
+          </div>
+          <p class="font-semibold">Mode</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 text-center shadow hover:shadow-lg transition cursor-pointer">
+          <div
+            class="mx-auto mb-4 w-14 h-14 flex items-center justify-center rounded-xl bg-red-500 text-white text-2xl">
+
+          </div>
+          <p class="font-semibold">Sports</p>
+        </div>
+
+      </div>
+    </section>
+    <!-- partie de rama-->
+
+
+    <section>
+
+      <div class="p-6 transition cursor-pointer xl:overscroll-contain overscroll-contain m-6 whitespace-nowrap">
+        <nav class="flex space-evenly gap- overflow-x-auto py-2 text-center">
+          <a href="categorie_Ordinateurs.html" class="bg-blue-500 m-2 p-2 border rounded-2xl">Tous</a>
+          <a href="phone.html" class="bg-white w-[250px] m-2 p-2 border rounded-2xl">Smartphones</a>
+          <a href="ordinateurs.html" class="bg-white w-[250px] m-2 p-2 border rounded-2xl">Ordinateurs</a>
+          <a href="gaming.html" class="bg-white w-[250px] m-2 p-2 border rounded-2xl">Gaming</a>
+          <a href="audio.html" class="bg-white w-[250px] m-2 p-2 border rounded-2xl">Audio</a>
+          <a href="photo.html" class="bg-white w-[250px] m-2 p-2 border rounded-2xl">Photo & Vidéo</a>
+          <a href="montre.html" class="bg-white w-[250px] m-2 p-2 border rounded-2xl">Montres connectées</a>
+          <a href="" class="bg-white w-[250px] m-2 p-2 border rounded-2xl">Offres flash</a>
+        </nav>
+      </div>
+
+
+      <!-- CHANGEMENT ICI : gap-6 pour espace entre sidebar et produits -->
+      <div class="flex flex-col md:flex-row gap-6 p-8">
+
+        <!-- SIDEBAR - LARGEUR FIXE RÉDUITE -->
+        <div class="bg-white rounded-2xl p-6 shadow-xl hover:shadow-lg transition cursor-pointer w-full md:w-72 lg:w-80 flex-shrink-0">
+
+          <div class="flex justify-between items-center mb-4 sticky top-0 z-10 bg-white">
+            <h1 class="text-2xl font-bold">Filtres</h1>
+            <button class="bg-blue-500 text-white px-3 py-2 border border-blue-900 rounded-2xl text-sm">Réinitialiser</button>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">💰 Prix</h2>
+            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> Moins de 100 $</label>
+            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> 100$ - 300$</label>
+            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> 300$ - 600$</label>
+            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> 600$ - 1000$</label>
+            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> Plus de 1000$</label>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold">🔖 Marques</h2>
+            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Apple (123)</label>
+            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Microsoft Surface (45)</label>
+            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Dell (123)</label>
+            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> HP (234)</label>
+            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Lenovo (176)</label>
+            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Acer (98)</label>
+            <div>
+              <button class="text-blue-500 hover:underline mt-2">Voir plus</button>
+            </div>
+          </div>
+
+          <div class="mb-6 flex flex-col gap-4">
+            <h2 class="text-xl font-semibold"> Type</h2>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="type" class="m-2"> Ultrabook</label>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="type" class="m-2"> Laptop classique</label>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="type" class="m-2"> 2-en-1 / Convertible</label>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="type" class="m-2"> Station de travail</label>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="type" class="m-2"> Gaming</label>
+            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="type" class="m-2"> Chromebook</label>
+          </div>
+
+          <div>
+            <h2>Processeur</h2>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="processeur" class="m-2"> Intel Core i3, i5...i9</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="processeur" class="m-2"> AMD Ryzen 3, 5...9</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="processeur" class="m-2"> Apple M1, M2...M4 </label>
+          </div>
+
+          <div>
+            <h2>RAM</h2>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="ram" class="m-2"> 4GB</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="ram" class="m-2"> 8GB</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="ram" class="m-2"> 16GB</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="ram" class="m-2"> 32GB</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="ram" class="m-2"> 64GB</label>
+          </div>
+
+          <div>
+            <h2>Stockage</h2>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="stockage" class="m-2"> 128 GB</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="stockage" class="m-2"> 256 GB</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="stockage" class="m-2"> 512 GB</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="stockage" class="m-2"> 1 TB</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="stockage" class="m-2"> 2 TB</label>
+          </div>
+
+          <div>
+            <h2>Écran</h2>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="ecran" class="m-2"> 13 pouces</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="ecran" class="m-2"> 14 pouces</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="ecran" class="m-2"> 15 pouces</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="ecran" class="m-2"> 17 pouces et plus</label>
+          </div>
+
+          <div>
+            <h2>Carte graphique</h2>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="gpu" class="m-2"> Intégrée (Intel/AMD)</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="gpu" class="m-2"> NVIDIA GeForce GTX/RTX</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="gpu" class="m-2"> AMD Radeon RX</label>
+            <label class="text-green    -500 cursor-pointer"><input type="checkbox" name="gpu" class="m-2"> Intel Iris Xe</label>
+            <label class="text-green-500 cursor-pointer"><input type="checkbox" name="gpu" class="m-2"> Apple M1/M2 GPU</label>
+          </div>
+
+          <div>
+            <h2>Système d'exploitation</h2>
+            <label class="text-red-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> Windows 11</label>
+            <label class="text-red-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> macOS</label>
+            <label class="text-red-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> Chrome OS</label>
+            <label class="text-red-500 cursor-pointer"><input type="checkbox" name="os" class="m-2"> Linux</label>
+          </div>
+
+        </div>
+
+
+        <!-- ZONE PRODUITS - PREND L'ESPACE RESTANT -->
+        <div class="flex-1">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Product Card -->
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur Portable XYZ</h3>
+              <p class="text-gray-600 mt-2">Marque ABC - 16GB RAM - 512GB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$999.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ease-in-out cursor-pointer">
+              <img src="https://via.placeholder.com/300x200" alt="Product Image" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-lg font-semibold">Ordinateur de Bureau DEF</h3>
+              <p class="text-gray-600 mt-2">Marque GHI - 32GB RAM - 1TB SSD</p>
+              <p class="text-purple-600 font-bold mt-4">$1499.99</p>
+            </div>
+          </div>
+
+          <!-- PAGINATION -->
+          <div class="flex justify-center mt-8">
+            <div class="flex items-center text-gray-600">
+              <div class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">&lt;</div>
+              <span class="p-4 m-2 border border-blue-500 bg-blue-500 text-white rounded-full cursor-pointer">1</span>
+              <span class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">2</span>
+              <span class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">3</span>
+              <span class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">4</span>
+              <span class="p-4 m-2 cursor-pointer">...</span>
+              <span class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">42</span>
+              <div class="p-4 m-2 border border-gray-300 hover:border-blue-500 rounded-full cursor-pointer transition">&gt;</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gradient-to-r from-indigo-900 to-purple-800 text-white mt-20">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <div>
+        <h2 class="text-xl font-bold mb-3">Ebuy</h2>
+        <p class="text-sm text-gray-300">Votre marketplace intelligente avec recherche par image</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-3">À propos</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li>Qui sommes-nous</li>
+          <li>Carrières</li>
+          <li>Presse</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-3">Aide</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li>Centre d'aide</li>
+          <li>Service client</li>
+          <li>Retours</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-3">Légal</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li>CGV</li>
+          <li>Confidentialité</li>
+          <li>Cookies</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="text-center text-sm py-4 border-t border-white/20">
+      © 2026 Ebuy. Tous droits réservés. Fait avec
+    </div>
+  </footer>
+
+</body>
+
+</html>
