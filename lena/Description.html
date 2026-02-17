@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+<body>
+   <div class="m-8 fixed">
+        <i class="fa-solid fa-angle-left"></i><a href="../index.html">Retour</a>
+      </div>
+
+  <main> 
+     
+   <div class="pt-16 max-w-6xl mx-auto p-6">
+
+  <div class="flex flex-col md:flex-row gap-8">
+
+    <!-- Image produit -->
+    <div class="md:w-1/2">
+      <img src="../images/img-1.jpeg"  alt="Produit" class="w-full h-auto rounded-lg shadow-md">
+    </div>
+
+    <!-- Infos produit -->
+    <div class="md:w-1/2 flex flex-col justify-between">
+      
+      <!-- Titre et prix -->
+      <div>
+        <h1 class="text-3xl font-bold mb-2">Nom du produit</h1>
+        <p class="text-xl text-gray-700 mb-4">120 000 FCFA</p>
+
+        <!-- Description -->
+        <p class="text-gray-600 mb-6">
+          Voici une description détaillée du produit. Elle peut expliquer les caractéristiques, les avantages et tout ce que le client doit savoir avant d'acheter.
+        </p>
+      </div>
+
+      <!-- Boutons -->
+      <div class="flex items-center gap-4">
+        <!-- Quantité -->
+        <input type="number" value="1" min="1" class="w-20 px-3 py-2 border rounded">
+
+        <!-- Bouton Ajouter au panier -->
+        <button class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">
+          Ajouter au panier
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+  </main>
+
+  
+    
+</body>
+</html>
