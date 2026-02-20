@@ -119,74 +119,11 @@
       <!-- CHANGEMENT ICI : gap-6 pour espace entre sidebar et produits -->
       <div class="flex flex-col md:flex-row gap-6 max-w-7xl mx-auto px-6 py-6">
 
-        <!-- SIDEBAR - LARGEUR FIXE RÉDUITE -->
-        <div
-          class="bg-white rounded-2xl p-6 shadow-xl hover:shadow-lg transition cursor-pointer w-full md:w-72 lg:w-80 flex-shrink-0">
-
-          <div class="flex justify-between items-center mb-4 sticky top-0 z-10 bg-white">
-            <h1 class="text-2xl font-bold">Filtres</h1>
-            <button
-              class="bg-blue-500 text-white px-3 py-2 border border-blue-900 rounded-2xl text-sm">Réinitialiser</button>
-          </div>
-
-          <div class="mb-6 flex flex-col gap-4">
-            <h2 class="text-xl font-semibold">💰 Prix</h2>
-            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> Moins de 100 $</label>
-            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> 100$ - 300$</label>
-            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> 300$ - 600$</label>
-            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> 600$ - 1000$</label>
-            <label class="cursor-pointer"><input type="checkbox" name="prix" class="m-2"> Plus de 1000$</label>
-          </div>
-
-          <div class="mb-6 flex flex-col gap-4">
-            <h2 class="text-xl font-semibold">🔖 Marques</h2>
-            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Apple (156)</label>
-            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Samsung (134)</label>
-            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Garmin (98)</label>
-            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Fitbit (87)</label>
-            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Huawei (54)</label>
-            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Amazfit (43)</label>
-            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Google (Nest) (67)</label>
-            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Amazon (Alexa) (89)</label>
-            <label class="cursor-pointer"><input type="checkbox" name="marque" class="m-2"> Philips Hue (45)</label>
-            <div>
-              <button class="text-blue-500 hover:underline mt-2">Voir plus</button>
-            </div>
-          </div>
-
-          <div class="mb-6 flex flex-col gap-4">
-            <h2 class="text-xl font-semibold">⌚ Type de produit</h2>
-            <label class="cursor-pointer"><input type="checkbox" name="type" class="m-2"> Montre connectée</label>
-            <label class="cursor-pointer"><input type="checkbox" name="type" class="m-2"> Bracelet d'activité</label>
-            <label class="cursor-pointer"><input type="checkbox" name="type" class="m-2"> Ampoule connectée</label>
-            <label class="cursor-pointer"><input type="checkbox" name="type" class="m-2"> Caméra de surveillance</label>
-            <label class="cursor-pointer"><input type="checkbox" name="type" class="m-2"> Sonnette connectée</label>
-            <label class="cursor-pointer"><input type="checkbox" name="type" class="m-2"> Thermostat intelligent</label>
-            <label class="cursor-pointer"><input type="checkbox" name="type" class="m-2"> Prise connectée</label>
-            <label class="cursor-pointer"><input type="checkbox" name="type" class="m-2"> Serrure connectée</label>
-            <label class="cursor-pointer"><input type="checkbox" name="type" class="m-2"> Assistant vocal / Enceinte
-              intelligente</label>
-            <label class="cursor-pointer"><input type="checkbox" name="type" class="m-2"> Balance connectée</label>
-            <label class="cursor-pointer"><input type="checkbox" name="type" class="m-2"> Tensiomètre connecté</label>
-            <label class="cursor-pointer"><input type="checkbox" name="type" class="m-2"> Robot aspirateur</label>
-          </div>
-
-
-          <div class="mb-6 flex flex-col gap-4">
-            <h2 class="text-xl font-semibold">⭐ Evaluation</h2>
-            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="evaluation" class="m-2"> ★★★★★
-              (5)</label>
-            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="evaluation" class="m-2"> ★★★★☆
-              (4+)</label>
-            <label class="text-yellow-500 cursor-pointer"><input type="checkbox" name="evaluation" class="m-2"> ★★★☆☆
-              (3+)</label>
-          </div>
-        </div>
 
 
         <!-- ZONE PRODUITS - PREND L'ESPACE RESTANT -->
         <div class="flex-1">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
             <div
               class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
