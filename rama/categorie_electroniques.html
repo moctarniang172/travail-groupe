@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
+
 <body>
   <header class="m-4 flex justify-between items-center h-[10vh]">
     <!--logo-->
@@ -18,136 +23,83 @@
     <!--bare de recherche-->
     <nav class="flex items-center w-[50%] bg-white rounded-full border border-2">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" placeholder="Rechercher des produits......." class="w-[100%] h-[5vh] bg-white border rounded-full">
+      <input type="text" placeholder="Rechercher des produits......."
+        class="w-[100%] h-[5vh] bg-white border rounded-full">
     </nav>
 
     <!--les icones-->
     <div class="flex items-center gap-4 me-4">
-       <i class="fa-regular fa-heart"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
-       <a 
-  href="moctar/connexion.html"
-  class="px-5 py-2 border border-gray-300 rounded-lg font-medium hover:bg-bleu hover:text-white transition duration-300">
-  Connexion
-</a>
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-cart-shopping"></i>
+      <a href="../moctar/connexion.html"
+        class="px-5 py-2 border border-gray-300 rounded-lg font-medium hover:bg-bleu hover:text-white transition duration-300">
+        Connexion
+      </a>
 
 
-        <a href="moctar/inscription.html"
-  class="inline-block px-6 py-2 bg-bleu  text-white font-medium rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition duration-300 text-center">
-  Inscription
-</a>
+      <a href="../moctar/inscription.html"
+        class="inline-block px-6 py-2 bg-bleu  text-white font-medium rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition duration-300 text-center">
+        Inscription
+      </a>
 
     </div>
   </header>
-
-<main>
-    <!--partie accueil-->
- <section class="h-[50vh] bg-bleu flex flex-col justify-center items-center text-center gap-6">
-  
-  <div class="text-5xl font-bold text-white">
-    <p>Trouvez exactement ce que vous cherchez</p>
-  </div>
-
-  <div class="text-white max-w-2xl">
-    <p>
-      Recherchez par mot-clé ou par image. Expérience d'achat immersive avec vues 360° et vidéos.
-    </p>
-  </div>
-
-  <div class="flex gap-4 mt-4">
-    
-    <button
-      class="flex items-center justify-center gap-2 px-6 h-12 bg-white rounded-full cursor-pointer">
-      <i class="fa-regular fa-window-restore"></i>
-      <a href="#produit">parcourir les produits</a>
-    </button>
-
-    <button
-      class="flex items-center justify-center gap-2 px-6 h-12 bg-white rounded-full cursor-pointer">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      Recherche par image
-    </button>
-
-  </div>
-</section>
-
-<!--categorie populair-->
-<div>
-  <p>Catégories populaires</p>
-</div>
-<section class="grid grid-cols-2 lg:grid-cols-4 gap-4 m-6">
-
- <div class="bg-blue-50 h-[15vh] rounded-xl border border-blue-100 
-            flex flex-col items-center justify-center gap-3 text-center 
-            cursor-pointer hover:bg-blue-100 transition duration-300">
-
-  <div class="flex items-center justify-center bg-blue-600 w-12 h-12 rounded-full">
-    <i class="fa-solid fa-mobile text-white"></i>
-  </div>
-
-  <a class="font-medium text-blue-700" href="electronique.html">
-    Électronique
-  </a>
-
-</div>
+  <main>
+    <div class="flex gap-6">
+      <a href="">Tout</a>
+      <a href="">Electronique</a>
+      <a href="">Mode</a>
+      <a href="">Maison</a>
+      <a href="">Sport</a>
+    </div>
+    <!-- partie de rama-->
 
 
-  <div class="bg-pink-50 h-[15vh] rounded-xl border border-pink-100 
-            flex flex-col items-center justify-center gap-3 text-center 
-            cursor-pointer hover:bg-pink-100 transition duration-300">
+    <section class="bg-blue-50">
 
-  <div class="flex items-center justify-center bg-pink-500 w-12 h-12 rounded-full">
-    <i class="fa-solid fa-shirt text-white"></i>
-  </div>
-
-  <p class="font-medium text-pink-700">Mode</p>
-
-</div>
-
-
-  <div class="bg-green-50 h-[15vh] rounded-xl border border-green-100 
-            flex flex-col items-center justify-center gap-3 text-center 
-            cursor-pointer hover:bg-green-100 transition duration-300">
-
-  <div class="flex items-center justify-center bg-green-600 w-12 h-12 rounded-full">
-    <i class="fa-solid fa-house text-white"></i>
-  </div>
-
-  <p class="font-medium text-green-700">Maison</p>
-
-</div>
-
-
- <div class="bg-orange-50 h-[15vh] rounded-xl border border-orange-100 
-            flex flex-col items-center justify-center gap-3 text-center 
-            cursor-pointer hover:bg-orange-100 transition duration-300">
-
-  <div class="flex items-center justify-center bg-orange-500 w-12 h-12 rounded-full">
-    <i class="fa-solid fa-camera text-white"></i>
-  </div>
-
-  <p class="font-medium text-orange-700">Photo</p>
-
-</div>
+      <div class=" max-w-7xl mx-auto px-6 py-6 transition cursor-pointer m-6 whitespace-nowrap">
+      <nav class="flex space-evenly overflow-x-auto py-2 text-center scrollbar-visible">
+        <a href="categorie_electroniques.html" class="bg-blue-500 text-white min-w-[150px] m-2 p-2 border rounded-2xl">
+          ⚡Tous</a>
+        <a href="phone.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl">📱
+          Smartphones</a>
+        <a href="ordinateurs.html"
+          class="bg-white hover:bg-blue-500 hover:text-white w-[250px] m-2 p-2 border rounded-2xl">💻 Ordinateurs</a>
+        <a href="gaming.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl"> 🎮 Gaming</a>
+        <a href="audio.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl"> 🎧 Audio</a>
+        <a href="tv&vidéo.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl">📺 TV &
+          Vidéo</a>
+        <a href="photo.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl"> 📷 Photo &
+          Vidéo</a>
+        <a href="objets-connectes.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl">🏠 Objets
+          connectées</a>
+        <a href="accessoires.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl"> 🔌
+          Accessoires</a>
+      </nav>
+      </div>
 
 
-</section>
 
-<!--produits vadette-->
-<section class="m-6" id="produit">
-  <div>
-    <p>produits vadettes</p>
+      <div class="flex flex-col md:flex-row gap-6 max-w-7xl mx-auto px-6 py-6">
 
-  </div>
-  <div class="flex-1">
+
+        <div class="flex-1">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
              
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
                 <img
-                  src="images/img-1.jpeg"
+                  src="telephone/Samsung galaxy S25 Ultra.jpg"
                   alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
@@ -182,12 +134,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
              
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
                 <img
-                  src="images/img-2.jpeg"
+                  src="ordinateur/LapTop.jpg"
                   alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
@@ -222,11 +175,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
              
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
-                <img src="images/img-3.jpeg"
+                <img
+                  src="gaming/PlayStation®5 console (slim).jpg"
                   alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
@@ -261,12 +216,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
              
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
                 <img
-                  src="images/img-6.jpeg"
+                  src="au/Casque Bluetooth® Studio BEATS 3 Wireless Over-ear Noir Mat.jpg"
                   alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
@@ -301,12 +257,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
              
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
                 <img
-                  src="images/img-6.jpeg"
+                  src="Televisi/Smart TV Samsung!!.jpg"
                   alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
@@ -341,12 +298,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
              
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
                 <img
-                  src="images/img-7.jpeg"
+                  src="phot/Appareils photo hybrides .jpg"
                   alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
@@ -381,12 +339,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
              
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
                 <img
-                  src="images/img-8.jpeg"
+                  src="phot/Appareils photo hybrides .jpg"
                   alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
@@ -421,12 +380,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
              
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
                 <img
-                  src="images/img-9.jpg"
+                  src="phot/Appareils photo hybrides .jpg"
                   alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
@@ -463,64 +423,87 @@
             
 
           </div>
+
+          <!-- PAGINATION -->
+          <div class="flex justify-center mt-8">
+            <div class="flex items-center text-gray-600">
+              <div class="p-4 m-2 border border-gray-300 hover:bg-blue-500 rounded-full cursor-pointer transition">&lt;
+              </div>
+              <span class="p-4 m-2 border border-blue-500 bg-blue-500 text-white rounded-full cursor-pointer">1</span>
+              <span
+                class="p-4 m-2 border border-gray-300 hover:bg-blue-500 hover:text-white rounded-full cursor-pointer transition">2</span>
+              <span
+                class="p-4 m-2 border border-gray-300 hover:bg-blue-500 hover:text-white rounded-full cursor-pointer transition">3</span>
+              <span
+                class="p-4 m-2 border border-gray-300 hover:bg-blue-500 hover:text-white rounded-full cursor-pointer transition">4</span>
+              <span class="p-4 m-2 cursor-pointer">...</span>
+              <span
+                class="p-4 m-2 border border-gray-300 hover:bg-blue-500 hover:text-white rounded-full cursor-pointer transition">42</span>
+              <div
+                class="p-4 m-2 border border-gray-300 hover:bg-blue-500  hover:text-white rounded-full cursor-pointer transition">
+                &gt;</div>
+            </div>
+          </div>
         </div>
 
-</section>
-
-</main>
-
-<!--Footer-->
-
-<footer class="bg-footer text-noire">
-  
-  <div class="max-w-7xl mx-auto px-6 py-10">
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      
-      <div>
-        <h1 class="text-2xl font-bold mb-3">À propos d'Ebuy</h1>
-        <p class="text-[15px] text-noire">
-          Plateforme e-commerce innovante avec recherche par image et expérience immersive.
-        </p>
       </div>
 
-      <div>
-        <h1 class="text-2xl font-bold mb-3">Service Client</h1>
-        <p class="text-[15px] text-noire">
-          Assistance, retours, livraison et support 24/7.
-        </p>
+    </section>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-footer text-noire">
+
+    <div class="max-w-7xl mx-auto px-6 py-10">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div>
+          <h1 class="text-2xl font-bold mb-3">À propos d'Ebuy</h1>
+          <p class="text-[15px] text-noire">
+            Plateforme e-commerce innovante avec recherche par image et expérience immersive.
+          </p>
+        </div>
+
+        <div>
+          <h1 class="text-2xl font-bold mb-3">Service Client</h1>
+          <p class="text-[15px] text-noire">
+            Assistance, retours, livraison et support 24/7.
+          </p>
+        </div>
+
+        <div>
+          <h1 class="text-2xl font-bold mb-3">Liens Rapides</h1>
+          <p class="text-[15px] text-noire">
+            Produits, catégories, promotions, nouveautés.
+          </p>
+        </div>
+
+        <div>
+          <h1 class="text-2xl font-bold mb-3">Suivez-nous</h1>
+          <div class="flex gap-4 mt-3">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+
+        </div>
+
       </div>
 
-      <div>
-        <h1 class="text-2xl font-bold mb-3">Liens Rapides</h1>
-        <p class="text-[15px] text-noire">
-          Produits, catégories, promotions, nouveautés.
-        </p>
-      </div>
+      <hr class="my-8 border-gray-600">
 
-      <div>
-        <h1 class="text-2xl font-bold mb-3">Suivez-nous</h1>
-       <div class="flex gap-4 mt-3">
-       <i class="fa-brands fa-facebook"></i>
-       <i class="fa-brands fa-instagram"></i>
-       <i class="fa-brands fa-twitter"></i>
-      </div>
-
-      </div>
+      <p class="text-center text-sm text-gray-400">
+        © 2026 Ebuy. Tous droits réservés.
+      </p>
 
     </div>
 
-    <hr class="my-8 border-gray-600">
+  </footer>
+  <script src="../index.js"></script>
 
-    <p class="text-center text-sm text-gray-400">
-      © 2026 Ebuy. Tous droits réservés.
-    </p>
-
-  </div>
-
-</footer>
-
-<script src="index.js"></script>
-  
 </body>
+
 </html>
