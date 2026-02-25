@@ -9,40 +9,50 @@
   <title>Document</title>
 </head>
 <body>
-  <header class="m-4 flex justify-between items-center h-[10vh]">
-    <!--logo-->
-    <div class="text-2xl font-bold text-purple-600">
+ <header class="px-4 py-3 bg-white shadow-md">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+    <!-- Logo -->
+    <div class="text-2xl font-bold text-purple-600 text-center md:text-left">
       Ebuy
     </div>
 
-    <!--bare de recherche-->
-    <nav class="flex items-center w-[50%] bg-white rounded-full border border-2">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" placeholder="Rechercher des produits......." class="w-[100%] h-[5vh] bg-white border rounded-full">
+    <!-- Barre de recherche -->
+    <nav class="flex items-center bg-white border rounded-full px-4 py-2 w-full md:w-1/2">
+      <i class="fa-solid fa-magnifying-glass text-gray-500 mr-2"></i>
+      <input 
+        type="text" placeholder="Rechercher des produits..."class="w-full outline-none bg-transparent">
     </nav>
 
-    <!--les icones-->
-    <div class="flex items-center gap-4 me-4">
-       <i class="fa-regular fa-heart"></i>
-        <a href="moctar/panier.html"><i class="fa-solid fa-cart-shopping"></i></a>
-       <a 
-  href="moctar/connexion.html"
-  class="px-5 py-2 border border-gray-300 rounded-lg font-medium hover:bg-bleu hover:text-white transition duration-300">
-  Connexion
-</a>
+    <!-- Icônes -->
+    <div class="flex items-center justify-center md:justify-end gap-4">
 
+      <i class="fa-regular fa-heart text-xl cursor-pointer"></i>
 
-        <a href="moctar/inscription.html"
-  class="inline-block px-6 py-2 bg-bleu  text-white font-medium rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition duration-300 text-center">
-  Inscription
-</a>
+      <a href="moctar/panier.html">
+        <i class="fa-solid fa-cart-shopping text-xl cursor-pointer"></i>
+      </a>
+
+      <a 
+        href="moctar/connexion.html"
+        class="px-4 py-2 border border-gray-300 rounded-lg font-medium hover:bg-bleu hover:text-white transition duration-300">
+        Connexion
+      </a>
+
+      <a 
+        href="moctar/inscription.html"
+        class="px-4 py-2 bg-bleu text-white font-medium rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition duration-300">
+        Inscription
+      </a>
 
     </div>
-  </header>
+
+  </div>
+</header>
 
 <main>
     <!--partie accueil-->
- <section class="h-[50vh] bg-accueil1 bg-cover bg-center flex flex-col justify-center items-center text-center gap-6">
+ <section class="h-[50vh] bg-[url('images/accueil.jpg')] bg-cover bg-center bg-no-repeate flex flex-col justify-center items-center text-center gap-6">
   
   <div class="text-5xl font-bold text-white">
     <p>Trouvez exactement ce que vous cherchez</p>
@@ -147,8 +157,7 @@
              
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
                 <img
-                  src="images/img-1.jpeg"
-                  alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+                  src="images/img-1.jpeg"alt="" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
                   class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
@@ -162,9 +171,8 @@
               </div>
 
               <div class="flex-1 p-4 bg-white">
-                <p class="text-gray-500 text-xs uppercase tracking-wide">SAMSUNG</p>
-                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Samsung Galaxy S25 Ultra</h3>
-
+                <p class="text-gray-500 text-xs uppercase tracking-wide">Nike Free Run Rouge</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Chaussure légère et respirante,idéale pour le sport et le quotidien.</h3>
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
       <i class="fa-solid fa-star"></i>
@@ -175,12 +183,12 @@
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">12GB RAM</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">512GB SSD</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Android 15</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">confortable</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum dolor.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum dolor.</span>
                 </div>
 
-                <p class="text-blue-600 font-bold text-2xl">prix</p>
+                <p class="text-blue-600 font-bold text-2xl">7500</p>
               </div>
 
             </div>
@@ -206,8 +214,8 @@
               </div>
 
               <div class="flex-1 p-4 bg-white">
-                <p class="text-gray-500 text-xs uppercase tracking-wide">SAMSUNG</p>
-                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Samsung Galaxy S25 Ultra</h3>
+                <p class="text-gray-500 text-xs uppercase tracking-wide">Lorem,ipsum.</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Lorem, ipsum dolor.</h3>
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
@@ -219,12 +227,12 @@
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">12GB RAM</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">512GB SSD</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Android 15</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum dolor.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum dolor.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">ALorem, ipsum dolor.</span>
                 </div>
 
-                <p class="text-blue-600 font-bold text-2xl">prix</p>
+                <p class="text-blue-600 font-bold text-2xl">250000</p>
               </div>
 
             </div>
@@ -249,8 +257,8 @@
               </div>
 
               <div class="flex-1 p-4 bg-white">
-                <p class="text-gray-500 text-xs uppercase tracking-wide">SAMSUNG</p>
-                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Samsung Galaxy S25 Ultra</h3>
+                <p class="text-gray-500 text-xs uppercase tracking-wide">Lorem, ipsum.</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Lorem, ipsum.</h3>
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
@@ -262,12 +270,12 @@
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">12GB RAM</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">512GB SSD</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Android 15</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
                 </div>
 
-                <p class="text-blue-600 font-bold text-2xl">prix</p>
+                <p class="text-blue-600 font-bold text-2xl">3500</p>
               </div>
 
             </div>
@@ -293,8 +301,8 @@
               </div>
 
               <div class="flex-1 p-4 bg-white">
-                <p class="text-gray-500 text-xs uppercase tracking-wide">SAMSUNG</p>
-                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Samsung Galaxy S25 Ultra</h3>
+                <p class="text-gray-500 text-xs uppercase tracking-wide">Lorem, ipsum dolor.</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Lorem, ipsum.</h3>
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
@@ -306,12 +314,12 @@
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">12GB RAM</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">512GB SSD</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Android 15</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
                 </div>
 
-                <p class="text-blue-600 font-bold text-2xl">prix</p>
+                <p class="text-blue-600 font-bold text-2xl">350000</p>
               </div>
 
             </div>
@@ -337,8 +345,8 @@
               </div>
 
               <div class="flex-1 p-4 bg-white">
-                <p class="text-gray-500 text-xs uppercase tracking-wide">SAMSUNG</p>
-                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Samsung Galaxy S25 Ultra</h3>
+                <p class="text-gray-500 text-xs uppercase tracking-wide">Lorem, ipsum.</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Lorem, ipsum dolor.</h3>
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
@@ -350,12 +358,12 @@
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">12GB RAM</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">512GB SSD</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Android 15</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum</span>
                 </div>
 
-                <p class="text-blue-600 font-bold text-2xl">prix</p>
+                <p class="text-blue-600 font-bold text-2xl">450000</p>
               </div>
 
             </div>
@@ -381,8 +389,8 @@
               </div>
 
               <div class="flex-1 p-4 bg-white">
-                <p class="text-gray-500 text-xs uppercase tracking-wide">SAMSUNG</p>
-                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Samsung Galaxy S25 Ultra</h3>
+                <p class="text-gray-500 text-xs uppercase tracking-wide">Lorem, ipsum dolor.</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Lorem, ipsum dolor.</h3>
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
@@ -394,12 +402,12 @@
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">12GB RAM</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">512GB SSD</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Android 15</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
                 </div>
 
-                <p class="text-blue-600 font-bold text-2xl">prix</p>
+                <p class="text-blue-600 font-bold text-2xl">50000</p>
               </div>
 
             </div>
@@ -425,8 +433,8 @@
               </div>
 
               <div class="flex-1 p-4 bg-white">
-                <p class="text-gray-500 text-xs uppercase tracking-wide">SAMSUNG</p>
-                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Samsung Galaxy S25 Ultra</h3>
+                <p class="text-gray-500 text-xs uppercase tracking-wide">Lorem, ipsum dolor.</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Lorem, ipsum.</h3>
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
@@ -438,12 +446,12 @@
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">12GB RAM</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">512GB SSD</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Android 15</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">5Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">AnLorem, ipsum.</span>
                 </div>
 
-                <p class="text-blue-600 font-bold text-2xl">prix</p>
+                <p class="text-blue-600 font-bold text-2xl">1500000</p>
               </div>
 
             </div>
@@ -469,8 +477,8 @@
               </div>
 
               <div class="flex-1 p-4 bg-white">
-                <p class="text-gray-500 text-xs uppercase tracking-wide">SAMSUNG</p>
-                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Samsung Galaxy S25 Ultra</h3>
+                <p class="text-gray-500 text-xs uppercase tracking-wide">Lorem, ipsum dolor.</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Lorem, ipsum.</h3>
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
@@ -482,12 +490,12 @@
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">12GB RAM</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">512GB SSD</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Android 15</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
                 </div>
 
-                <p class="text-blue-600 font-bold text-2xl">prix</p>
+                <p class="text-blue-600 font-bold text-2xl">6500000</p>
               </div>
 
             </div>
