@@ -11,7 +11,7 @@
             jaune : '#ffd43b',
           },
           backgroundImage: {
-        'accueil': "url('/images/accueil.png')",
+        'accueil1': "url('/images/accueil.png')",
         }
       }
     }
