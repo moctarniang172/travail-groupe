@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ebuy - Paiement</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="bg-white shadow px-10 py-4 flex items-center gap-3">
+            <a href="travail-groupe\index.html" class="text-indigo-600 text-sm flex items-center gap-1 hover:underline">&#8249; Retour</a>
+            <span class="text-gray-300">|</span>
+            <h1 class="text-xl font-extrabold text-indigo-600">🛒 Ebuy – Paiement</h1>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="flex items-center justify-center gap-0 pt-6 pb-2">
+  
+        <div class="flex flex-col items-center gap-1">
+            <div
+                class="w-9 h-9 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm">
+                ✓</div>
+            <span class="text-xs font-bold text-indigo-600">Panier</span>
+        </div>
+        <div class="w-14 h-0.5 bg-indigo-600 mb-5"></div>
+  
+        <div class="flex flex-col items-center gap-1">
+            <div
+                class="w-9 h-9 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm">
+                ✓</div>
+            <span class="text-xs font-bold text-indigo-600">Livraison</span>
+        </div>
+        <div class="w-14 h-0.5 bg-indigo-600 mb-5"></div>
+
+        <div class="flex flex-col items-center gap-1">
+            <div
+                class="w-9 h-9 rounded-full bg-indigo-600 text-white ring-4 ring-indigo-200 flex items-center justify-center font-bold text-sm">
+                3</div>
+            <span class="text-xs font-bold text-indigo-600">Paiement</span>
+        </div>
+    </div>
+
+
+    <div class="max-w-4xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+
+        <div class="lg:col-span-2 flex flex-col gap-5">
+
+            <div class="bg-white rounded-2xl shadow p-6">
+                <h2 class="text-base font-extrabold border-b border-gray-100 pb-3 mb-4">📦 Adresse de livraison</h2>
+                <div class="grid grid-cols-2 gap-3 mb-3">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 mb-1">Prénom</label>
+                        <input type="text" placeholder="Lena"
+                            class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-gray-50 focus:outline-none focus:border-indigo-500" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 mb-1">Nom</label>
+                        <input type="text" placeholder="Djédhiou"
+                            class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-gray-50 focus:outline-none focus:border-indigo-500" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="block text-xs font-bold text-gray-500 mb-1">Adresse</label>
+                    <input type="text" placeholder="Sité Sotract, Keur Massar"
+                        class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-gray-50 focus:outline-none focus:border-indigo-500" />
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 mb-1">Ville</label>
+                        <input type="text" placeholder="Dakar"
+                            class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-gray-50 focus:outline-none focus:border-indigo-500" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 mb-1">Téléphone</label>
+                        <input type="text" placeholder="+221 77 000 00 00"
+                            class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-gray-50 focus:outline-none focus:border-indigo-500" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-2xl shadow p-6">
+                <h2 class="text-base font-extrabold border-b border-gray-100 pb-3 mb-4">💳 Mode de paiement</h2>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+                    <div 
+                        class="pay-method active border-2 bg-indigo-50 text-indigo-600 rounded-xl p-3 text-center cursor-pointer text-xs font-bold transition">
+                        <div class="text-2xl mb-1">💳</div>Carte bancaire
+                    </div>
+                    <div
+                        class="pay-method border-2 border-gray-200 bg-gray-50 text-gray-500 rounded-xl p-3 text-center cursor-pointer text-xs font-bold transition hover:border-indigo-400 hover:text-indigo-500">
+                        <div class="text-2xl mb-1">
+                            <img src="Wave-Logo.png" alt="">
+                        </div>Wave
+                    </div>
+                    <div
+                        class="pay-method border-2 border-gray-200 bg-gray-50 text-gray-500 rounded-xl p-3 text-center cursor-pointer text-xs font-bold transition hover:border-indigo-400 hover:text-indigo-500">
+                        <div class="text-2xl mb-1">
+                            <img src="OM-Logo.png" class="w-30">
+                        </div>Orange Money
+                    </div>
+                    <div
+                        class="pay-method border-2 border-indigo-500 bg-gray-50 text-gray-500 rounded-xl p-3 text-center cursor-pointer text-xs font-bold transition hover:border-indigo-400 hover:text-indigo-500">
+                        <div class="text-2xl mb-1" id="livraison">🚚</div>À la livraison
+                    </div>
+                </div>
+
+
+
+                <div >
+                    <p class="text-sm text-gray-600 bg-gray-50 rounded-xl p-4">
+                        💵 Vous paierez en espèces lors de la réception de votre commande.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="lg:col-span-1">
+            <div class="bg-white rounded-2xl shadow p-6 sticky top-6">
+                <h2 class="text-base font-extrabold border-b border-gray-100 pb-3 mb-4">🧾 Résumé</h2>
+
+                <div class="flex items-center gap-3 py-3 border-b border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=80" alt="Nike"
+                        class="w-12 h-12 rounded-xl object-cover bg-gray-100" />
+                    <div class="flex-1">
+                        <p class="text-sm font-bold">Chaussure Nike</p>
+                        <p class="text-xs text-gray-400">Qté : 1</p>
+                    </div>
+                    <span class="text-sm font-extrabold text-indigo-600">25 000 FCFA</span>
+                </div>
+
+                <div class="flex items-center gap-3 py-3 border-b border-gray-100">
+                    <div class="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-2xl">👕</div>
+                    <div class="flex-1">
+                        <p class="text-sm font-bold">T-shirt Adidas</p>
+                        <p class="text-xs text-gray-400">Qté : 2</p>
+                    </div>
+                    <span class="text-sm font-extrabold text-indigo-600">30 000 FCFA</span>
+                </div>
+
+                <div class="mt-4 space-y-2">
+                    <div class="flex justify-between text-sm text-gray-500">
+                        <span>Sous-total</span><span>55 000 FCFA</span>
+                    </div>
+                    <div class="flex justify-between text-sm text-gray-500">
+                        <span>Livraison</span><span>2 000 FCFA</span>
+                    </div>
+                    <div
+                        class="flex justify-between text-base font-extrabold text-gray-800 border-t border-gray-100 pt-3 mt-2">
+                        <span>Total</span><span>57 000 FCFA</span>
+                    </div>
+                </div>
+
+                <!-- BOUTON -->
+                <button
+                    class="w-full mt-5 bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white font-extrabold text-base py-4 rounded-xl transition flex items-center justify-center gap-2">
+                    🔒 Confirmer le paiement
+                </button>
+                <p class="text-center text-xs text-gray-400 mt-3">Paiement <span class="text-indigo-500 font-bold">100%
+                        sécurisé</span></p>
+            </div>
+        </div>
+
+    </div>
+
+    </main>
+
+</body>
+
+</html>
