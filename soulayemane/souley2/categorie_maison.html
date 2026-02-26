@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+ <header class="px-4 py-3 bg-white">
+  <div class="max-w-7xl mx-auto flex flex-col gap-4">
+
+    <!-- le Logo et les icones alignent sur meme ligneIcônes -->
+    <div class="flex items-center justify-between md:flex-row">
+
+      <!-- Logo -->
+      <div class="text-2xl font-bold text-purple-600">
+        Ebuy
+      </div>
+
+      <!-- Icônes -->
+      <div class="flex items-center gap-4">
+
+        <i class="fa-regular fa-heart text-xl cursor-pointer"></i>
+
+        <a href="moctar/panier.html">
+          <i class="fa-solid fa-cart-shopping text-xl cursor-pointer"></i>
+        </a>
+
+        <a 
+          href="moctar/connexion.html"
+          class="px-4 py-2 border border-gray-300 rounded-lg font-medium hover:bg-bleu hover:text-white transition duration-300">
+          Connexion
+        </a>
+
+        <a 
+          href="moctar/inscription.html"
+          class="px-4 py-2 bg-bleu text-white font-medium rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition duration-300">
+          Inscription
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Barre de recherche -->
+    <nav class="flex items-center bg-white border rounded-full px-4 py-2 w-full md:w-1/2 md:mx-auto">
+      <i class="fa-solid fa-magnifying-glass text-gray-500 mr-2"></i>
+      <input 
+        type="text" 
+        placeholder="Rechercher des produits..."
+        class="w-full outline-none bg-transparent">
+    </nav>
+
+  </div>
+</header>
+  <main>
+   <div class="flex gap-6">
+      <a href="../../index.html">Tout</a>
+      <a href="../../rama/categorie_electroniques.html">Electronique</a>
+       <a href="../../L&na/categorie_mode.html">Mode</a>
+      <a href="categorie_maison.html">Maison</a>
+      <a href="../../fatoumata/categorie_loisir_sport.html">Sport</a>
+    </div>
+    <!-- partie de souleymane-->
+
+
+    <section class="bg-blue-50">
+
+      <div class=" max-w-7xl mx-auto px-6 py-6 transition cursor-pointer m-6 whitespace-nowrap">
+      <nav class="flex space-evenly overflow-x-auto py-2 text-center scrollbar-visible">
+        <a href="categorie_maison.html" class="bg-blue-500 text-white min-w-[150px] m-2 p-2 border rounded-2xl">
+          ⚡Tous</a>
+        <a href="chambre.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl">Chambre</a>
+        <a href="cuisine.html"
+          class="bg-white hover:bg-blue-500 hover:text-white w-[250px] m-2 p-2 border rounded-2xl">Cuisine</a>
+        <a href="dining_table.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl">Dining_table</a>
+        <a href="jardin.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl">Jardin</a>
+        <a href="lamp.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl">Lamp</a>
+        <a href="maison.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl">Maison</a>
+        <a href="meuble_salon.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl">Meuble_salon</a>
+        <a href="rideau.html"
+          class="bg-white hover:bg-blue-500 hover:text-white min-w-[250px] m-2 p-2 border rounded-2xl">Rideau</a>
+      </nav>
+      </div>
+
+
+
+      <div class="flex flex-col md:flex-row gap-6 max-w-7xl mx-auto px-6 py-6">
+
+
+        <div class="flex-1">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+
+             
+              <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
+                <img
+                  src="maison/maison5.jpg"
+                  alt="Maison a vendre" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+
+                <div
+                  class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
+                  <button class="bg-white p-3 rounded-full hover:bg-red-50 hover:text-red-500 shadow-lg">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                  <button class="bg-white p-3 rounded-full hover:bg-blue-50 hover:text-blue-500 shadow-lg">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex-1 p-4 bg-white">
+                <p class="text-gray-500 text-xs uppercase tracking-wide">MAISON</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Maison d'une tres belle villa</h3>
+
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</span>
+              
+                </div>
+
+                <div class="flex gap-2 mb-4 flex-wrap">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lucieuse 100%</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Meubler 100%</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">A Vendre 100%</span>
+                </div>
+
+                <p class="text-blue-600 font-bold text-2xl">200 000 000 FCFA</p>
+              </div>
+
+            </div>
+
+
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+
+             
+              <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
+                <img
+                  src="maison/maison6.jpg"
+                  alt="Maison a vendre" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+
+                <div
+                  class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
+                  <button class="bg-white p-3 rounded-full hover:bg-red-50 hover:text-red-500 shadow-lg">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                  <button class="bg-white p-3 rounded-full hover:bg-blue-50 hover:text-blue-500 shadow-lg">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex-1 p-4 bg-white">
+                <p class="text-gray-500 text-xs uppercase tracking-wide">MAISON</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Maison d'une tres belle villa</h3>
+
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</span>
+                
+                </div>
+
+                <div class="flex gap-2 mb-4 flex-wrap">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Luxieuse 100%</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Meubler 100%</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">A vendre</span>
+                </div>
+
+                <p class="text-blue-600 font-bold text-2xl">350 000 000 FCFA</p>
+              </div>
+
+            </div>
+
+
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+
+             
+              <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
+                <img
+                  src="cuisine/cuisine8.jpg"
+                  alt="Cuisine" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+
+                <div
+                  class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
+                  <button class="bg-white p-3 rounded-full hover:bg-red-50 hover:text-red-500 shadow-lg">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                  <button class="bg-white p-3 rounded-full hover:bg-blue-50 hover:text-blue-500 shadow-lg">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex-1 p-4 bg-white">
+                <p class="text-gray-500 text-xs uppercase tracking-wide">CUISINE</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Cuisine Americain</h3>
+
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</span>
+                
+                </div>
+
+                <div class="flex gap-2 mb-4 flex-wrap">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Prix Adorable 100%</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Garantie 100%</span>
+
+                </div>
+
+                <p class="text-blue-600 font-bold text-2xl">185 000 FCFA</p>
+              </div>
+
+            </div>
+
+
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+
+             
+              <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
+                <img
+                  src="jardin/jardin6.jpg"
+                  alt="Jardin Equiper" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+
+                <div
+                  class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
+                  <button class="bg-white p-3 rounded-full hover:bg-red-50 hover:text-red-500 shadow-lg">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                  <button class="bg-white p-3 rounded-full hover:bg-blue-50 hover:text-blue-500 shadow-lg">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex-1 p-4 bg-white">
+                <p class="text-gray-500 text-xs uppercase tracking-wide">JARDIN</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Jardin Equiper</h3>
+
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</span>
+                 
+                </div>
+
+                <div class="flex gap-2 mb-4 flex-wrap">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Prix reduite 100%</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Espacieux 100%</span>
+
+                </div>
+
+                <p class="text-blue-600 font-bold text-2xl">1 700 000 FCFA</p>
+              </div>
+
+            </div>
+            
+
+
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+
+             
+              <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
+                <img
+                  src="chambre/image4.jpg"
+                  alt="Chambre avec lit" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+
+                <div
+                  class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
+                  <button class="bg-white p-3 rounded-full hover:bg-red-50 hover:text-red-500 shadow-lg">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                  <button class="bg-white p-3 rounded-full hover:bg-blue-50 hover:text-blue-500 shadow-lg">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex-1 p-4 bg-white">
+                <p class="text-gray-500 text-xs uppercase tracking-wide">CHAMBRE&LIT</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Chambre espacieux</h3>
+
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</span>
+
+                </div>
+
+                <div class="flex gap-2 mb-4 flex-wrap">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Confortable 100%</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Garantie 100%</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Grande Chambre</span>
+                </div>
+
+                <p class="text-blue-600 font-bold text-2xl">880 000 FCFA</p>
+              </div>
+
+            </div>
+
+
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+
+             
+              <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
+                <img
+                  src="meuble_salon/meuble4.webp"
+                  alt="Meuble" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+
+                <div
+                  class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
+                  <button class="bg-white p-3 rounded-full hover:bg-red-50 hover:text-red-500 shadow-lg">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                  <button class="bg-white p-3 rounded-full hover:bg-blue-50 hover:text-blue-500 shadow-lg">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex-1 p-4 bg-white">
+                <p class="text-gray-500 text-xs uppercase tracking-wide">MEUBLE</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Meuble confortable</h3>
+
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</span>
+                 
+                </div>
+
+                <div class="flex gap-2 mb-4 flex-wrap">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Doux 100%</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Confortable 100%</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Garantie 100%</span>
+                </div>
+
+                <p class="text-blue-600 font-bold text-2xl">630 000 FCFA</p>
+              </div>
+
+            </div>
+
+
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+
+             
+              <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
+                <img
+                  src="rideau/rideau1.webp"
+                  alt="Rideau de class" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+
+                <div
+                  class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
+                  <button class="bg-white p-3 rounded-full hover:bg-red-50 hover:text-red-500 shadow-lg">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                  <button class="bg-white p-3 rounded-full hover:bg-blue-50 hover:text-blue-500 shadow-lg">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex-1 p-4 bg-white">
+                <p class="text-gray-500 text-xs uppercase tracking-wide">RIDEAU</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Rideau de class</h3>
+
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</span>
+    
+                </div>
+
+                <div class="flex gap-2 mb-4 flex-wrap">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Coton 100%</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Garantie 100%</span>
+     
+                </div>
+
+                <p class="text-blue-600 font-bold text-2xl">180 000 FCFA</p>
+              </div>
+
+            </div>
+
+
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+
+             
+              <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
+                <img
+                  src="lamp/lamp7.webp"
+                  alt="Lamp de salon" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+
+                <div
+                  class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
+                  <button class="bg-white p-3 rounded-full hover:bg-red-50 hover:text-red-500 shadow-lg">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                  <button class="bg-white p-3 rounded-full hover:bg-blue-50 hover:text-blue-500 shadow-lg">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex-1 p-4 bg-white">
+                <p class="text-gray-500 text-xs uppercase tracking-wide">LAMP</p>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Lamp lumineux</h3>
+
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</span>
+      
+                </div>
+
+                <div class="flex gap-2 mb-4 flex-wrap">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Garantie 100%</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lumineux a 100%</span>
+       
+                </div>
+
+                <p class="text-blue-600 font-bold text-2xl">150 000 FCFA</p>
+              </div>
+
+            </div>
+            
+            
+
+          </div>
+
+          <!-- PAGINATION -->
+          <div class="flex justify-center mt-8">
+            <div class="flex items-center text-gray-600">
+              <div class="p-4 m-2 border border-gray-300 hover:bg-blue-500 rounded-full cursor-pointer transition">&lt;
+              </div>
+              <span class="p-4 m-2 border border-blue-500 bg-blue-500 text-white rounded-full cursor-pointer">1</span>
+              <span
+                class="p-4 m-2 border border-gray-300 hover:bg-blue-500 hover:text-white rounded-full cursor-pointer transition">2</span>
+              <span
+                class="p-4 m-2 border border-gray-300 hover:bg-blue-500 hover:text-white rounded-full cursor-pointer transition">3</span>
+              <span
+                class="p-4 m-2 border border-gray-300 hover:bg-blue-500 hover:text-white rounded-full cursor-pointer transition">4</span>
+              <span class="p-4 m-2 cursor-pointer">...</span>
+              <span
+                class="p-4 m-2 border border-gray-300 hover:bg-blue-500 hover:text-white rounded-full cursor-pointer transition">42</span>
+              <div
+                class="p-4 m-2 border border-gray-300 hover:bg-blue-500  hover:text-white rounded-full cursor-pointer transition">
+                &gt;</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-footer text-noire">
+
+    <div class="max-w-7xl mx-auto px-6 py-10">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div>
+          <h1 class="text-2xl font-bold mb-3">À propos d'Ebuy</h1>
+          <p class="text-[15px] text-noire">
+            Plateforme e-commerce innovante avec recherche par image et expérience immersive.
+          </p>
+        </div>
+
+        <div>
+          <h1 class="text-2xl font-bold mb-3">Service Client</h1>
+          <p class="text-[15px] text-noire">
+            Assistance, retours, livraison et support 24/7.
+          </p>
+        </div>
+
+        <div>
+          <h1 class="text-2xl font-bold mb-3">Liens Rapides</h1>
+          <p class="text-[15px] text-noire">
+            Produits, catégories, promotions, nouveautés.
+          </p>
+        </div>
+
+        <div>
+          <h1 class="text-2xl font-bold mb-3">Suivez-nous</h1>
+          <div class="flex gap-4 mt-3">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+
+        </div>
+
+      </div>
+
+      <hr class="my-8 border-gray-600">
+
+      <p class="text-center text-sm text-gray-400">
+        © 2026 Ebuy. Tous droits réservés.
+      </p>
+
+    </div>
+
+  </footer>
+  <script src="../../index.js"></script>
+
+</body>
+
+</html>
