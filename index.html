@@ -1,169 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Document</title>
+  <title>Accueil</title>
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .mega-menu {
+      display: none;
+    }
+
+    .has-mega:hover .mega-menu {
+      display: flex;
+    }
+  </style>
 </head>
-<body>
-<header class="px-4 py-3 bg-white shadow-md">
-  <div class="max-w-7xl mx-auto flex flex-col gap-4">
 
-    <!-- le Logo et les icones alignent sur meme ligneIcônes -->
-    <div class="flex items-center justify-between md:flex-row">
+<body class="bg-gray-50">
+  </head>
 
-      <!-- Logo -->
-      <div class="text-2xl font-bold text-purple-600">
-        Ebuy
+  <body>
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center gap-5">
+
+
+        <a href="#" class="text-2xl font-black text-indigo-600 shrink-0">
+          E<span class="text-gray-800">buy</span>
+        </a>
+
+
+        <nav class="flex items-center gap-1 shrink-0">
+
+          <a href="#"
+            class="px-3 py-2 text-sm font-bold text-indigo-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">
+            Accueil
+          </a>
+
+
+          <div class="has-mega relative">
+            <button
+              class="flex items-center gap-1.5 px-3 py-2 text-sm font-bold hover:bg-indigo-50 rounded-lg transition">
+              Catégories <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+
+            <div
+              class="mega-menu absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-[640px] gap-6 z-50">
+
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center">
+                    <i class="fa-solid fa-mobile text-blue-600 text-xs"></i>
+                  </span>
+                  <a href="/rama/categorie_electroniques.html">
+                    <h3 class="font-black text-gray-800 text-sm">Électronique</h3>
+                  </a>
+                </div>
+                <ul class="space-y-2">
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-indigo-600 hover:font-bold transition block">Smartphones</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-indigo-600 hover:font-bold transition block">Ordinateurs</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-indigo-600 hover:font-bold transition block">Gaming</a>
+                  </li>
+                  <li><a href="#"
+                      class="inline-block mt-1 text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full hover:bg-indigo-100 transition">Voir
+                      tout →</a></li>
+                </ul>
+              </div>
+
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="w-7 h-7 rounded-full bg-pink-100 flex items-center justify-center">
+                    <i class="fa-solid fa-shirt text-pink-500 text-xs"></i>
+                  </span>
+                  <a href="/L&na/categorie_mode.html">
+                    <h3 class="font-black text-gray-800 text-sm">Mode</h3>
+                  </a>
+                </div>
+                <ul class="space-y-2">
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-pink-600 hover:font-bold transition block">Vêtements
+                      Homme</a></li>
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-pink-600 hover:font-bold transition block">Vêtements
+                      Femme</a></li>
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-pink-600 hover:font-bold transition block">Chaussures</a>
+                  </li>
+                  <li><a href="#"
+                      class="inline-block mt-1 text-xs font-bold text-pink-600 bg-pink-50 px-3 py-1 rounded-full hover:bg-pink-100 transition">Voir
+                      tout →</a></li>
+                </ul>
+              </div>
+
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center">
+                    <i class="fa-solid fa-house text-green-600 text-xs"></i>
+                  </span>
+                  <a href="/soulayemane/souley2/categorie_maison.html">
+                    <h3 class="font-black text-gray-800 text-sm">Maison</h3>
+                  </a>
+                </div>
+                <ul class="space-y-2">
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-green-600 hover:font-bold transition block">Décoration</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-green-600 hover:font-bold transition block">Cuisine</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-green-600 hover:font-bold transition block">Meubles</a>
+                  </li>
+                  <li><a href="#"
+                      class="inline-block mt-1 text-xs font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full hover:bg-green-100 transition">Voir
+                      tout →</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </nav>
+
+
+        <div
+          class="flex-1 flex items-center bg-gray-100 rounded-full px-4 py-2 gap-2 border border-transparent focus-within:border-indigo-400 focus-within:bg-white transition">
+          <i class="fa-solid fa-magnifying-glass text-gray-400 text-sm"></i>
+          <input type="text" placeholder="Rechercher des produits..."
+            class="bg-transparent w-full text-sm outline-none text-gray-700 placeholder-gray-400" />
+        </div>
+
+
+        <div class="flex items-center gap-3 shrink-0">
+          <button class="text-gray-500 hover:text-indigo-600 transition">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+          <a href="moctar/panier.html" class="relative text-gray-500 hover:text-indigo-600 transition">
+            <i class="fa-solid fa-cart-shopping text-xl"></i>
+            <span
+              class="absolute -top-2 -right-2 bg-indigo-600 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">2</span>
+          </a>
+          <a href="moctar/connexion.html"
+            class="px-4 py-1.5 border border-gray-300 rounded-lg text-sm font-bold text-gray-600 hover:border-indigo-500 hover:text-indigo-600 transition">
+            Connexion
+          </a>
+          <a href="moctar/inscription.html"
+            class="px-4 py-1.5 bg-indigo-600 text-white text-sm font-bold rounded-lg hover:bg-indigo-700 transition">
+            Inscription
+          </a>
+        </div>
+
       </div>
+    </header>
 
-      <!-- Icônes -->
-      <div class="flex items-center gap-4">
+    <main>
+      <!--partie accueil-->
+      <section
+        class="h-[50vh] bg-[url('images/accueil.jpg')] bg-cover bg-center bg-no-repeate flex flex-col justify-center items-center text-center gap-6">
 
-        <i class="fa-regular fa-heart text-xl cursor-pointer"></i>
+        <div class="text-5xl font-bold text-white">
+          <p>Trouvez exactement ce que vous cherchez</p>
+        </div>
 
-        <a href="moctar/panier.html">
-          <i class="fa-solid fa-cart-shopping text-xl cursor-pointer"></i>
-        </a>
+        <div class="text-white max-w-2xl">
+          <p>
+            Recherchez par mot-clé ou par image. Expérience d'achat immersive avec vues 360° et vidéos.
+          </p>
+        </div>
 
-        <a 
-          href="moctar/connexion.html"
-          class="px-4 py-2 border border-gray-300 rounded-lg font-medium hover:bg-bleu hover:text-white transition duration-300">
-          Connexion
-        </a>
+        <div class="flex gap-4 mt-4">
 
-        <a 
-          href="moctar/inscription.html"
-          class="px-4 py-2 bg-bleu text-white font-medium rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition duration-300">
-          Inscription
-        </a>
+          <button class="flex items-center justify-center gap-2 px-6 h-12 bg-white rounded-full cursor-pointer">
+            <i class="fa-regular fa-window-restore"></i>
+            <a href="#produit">parcourir les produits</a>
+          </button>
 
-      </div>
-    </div>
+          <button class="flex items-center justify-center gap-2 px-6 h-12 bg-white rounded-full cursor-pointer">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Recherche par image
+          </button>
 
-    <!-- Barre de recherche -->
-    <nav class="flex items-center bg-white border rounded-full px-4 py-2 w-full md:w-1/2 md:mx-auto">
-      <i class="fa-solid fa-magnifying-glass text-gray-500 mr-2"></i>
-      <input 
-        type="text" 
-        placeholder="Rechercher des produits..."
-        class="w-full outline-none bg-transparent">
-    </nav>
-
-  </div>
-</header>
-
-<main>
-    <!--partie accueil-->
- <section class="h-[50vh] bg-[url('images/accueil.jpg')] bg-cover bg-center bg-no-repeate flex flex-col justify-center items-center text-center gap-6">
-  
-  <div class="text-5xl font-bold text-white">
-    <p>Trouvez exactement ce que vous cherchez</p>
-  </div>
-
-  <div class="text-white max-w-2xl">
-    <p>
-      Recherchez par mot-clé ou par image. Expérience d'achat immersive avec vues 360° et vidéos.
-    </p>
-  </div>
-
-  <div class="flex gap-4 mt-4">
-    
-    <button
-      class="flex items-center justify-center gap-2 px-6 h-12 bg-white rounded-full cursor-pointer">
-      <i class="fa-regular fa-window-restore"></i>
-      <a href="#produit">parcourir les produits</a>
-    </button>
-
-    <button
-      class="flex items-center justify-center gap-2 px-6 h-12 bg-white rounded-full cursor-pointer">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      Recherche par image
-    </button>
-
-  </div>
-</section>
-
-<!--categorie populair-->
-<div>
-  <p>Catégories populaires</p>
-</div>
-<section class="grid grid-cols-2 lg:grid-cols-4 gap-4 m-6">
-
- <div class="bg-blue-50 h-[15vh] rounded-xl border border-blue-100 
-            flex flex-col items-center justify-center gap-3 text-center 
-            cursor-pointer hover:bg-blue-100 transition duration-300">
-
-  <div class="flex items-center justify-center bg-blue-600 w-12 h-12 rounded-full">
-    <i class="fa-solid fa-mobile text-white"></i>
-  </div>
-
-  <a class="font-medium text-blue-700" href="rama/categorie_electroniques.html">
-    Électronique
-  </a>
-
-</div>
+        </div>
+      </section>
 
 
-  <div class="bg-pink-50 h-[15vh] rounded-xl border border-pink-100 
-            flex flex-col items-center justify-center gap-3 text-center 
-            cursor-pointer hover:bg-pink-100 transition duration-300">
 
-  <div class="flex items-center justify-center bg-pink-500 w-12 h-12 rounded-full">
-    <i class="fa-solid fa-shirt text-white"></i>
-  </div>
+      <!--produits vadette-->
+      <section class="m-6" id="produit">
+        <div>
+          <h2 class="text-2xl font-black text-gray-800">Produits en vedette</h2>
 
-  <a class="font-medium text-pink-700" href="L&na/categorie_mode.html">Mode</a>
-
-</div>
-
-
-  <div class="bg-green-50 h-[15vh] rounded-xl border border-green-100 
-            flex flex-col items-center justify-center gap-3 text-center 
-            cursor-pointer hover:bg-green-100 transition duration-300">
-
-  <div class="flex items-center justify-center bg-green-600 w-12 h-12 rounded-full">
-    <i class="fa-solid fa-house text-white"></i>
-  </div>
-
-  <a class="font-medium text-green-700" href="/soulayemane/souley2/categorie_maison.html">Maison</a>
-
-</div>
-
-
- <div class="bg-orange-50 h-[15vh] rounded-xl border border-orange-100 
-            flex flex-col items-center justify-center gap-3 text-center 
-            cursor-pointer hover:bg-orange-100 transition duration-300">
-
-  <div class="flex items-center justify-center bg-orange-500 w-12 h-12 rounded-full">
-    <i class="fa-solid fa-camera text-white"></i>
-  </div>
-
-  <p class="font-medium text-orange-700">Photo</p>
-
-</div>
-
-
-</section>
-
-<!--produits vadette-->
-<section class="m-6" id="produit">
-  <div>
-    <p>produits vadettes</p>
-
-  </div>
-  <div class="flex-1">
+        </div>
+        <div class="flex-1">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
-             
+
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
-                <img
-                  src="images/img-1.jpeg"alt="" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+                <img src="images/img-1.jpeg" alt=""
+                  class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
                   class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
@@ -178,20 +228,23 @@
 
               <div class="flex-1 p-4 bg-white">
                 <p class="text-gray-500 text-xs uppercase tracking-wide">Nike Free Run Rouge</p>
-                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Chaussure légère et respirante,idéale pour le sport et le quotidien.</h3>
+                <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Chaussure légère et respirante,idéale pour le
+                  sport et le quotidien.</h3>
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-regular fa-star"></i></span>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i></span>
                   <span class="text-gray-500 text-sm">(200 avis)</span>
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
                   <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">confortable</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum dolor.</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum dolor.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum
+                    dolor.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum
+                    dolor.</span>
                 </div>
 
                 <p class="text-blue-600 font-bold text-2xl">7500</p>
@@ -200,13 +253,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
-             
+
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
-                <img
-                  src="images/img-2.jpeg"
-                  alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+                <img src="images/img-2.jpeg" alt="Samsung Galaxy S25 Ultra"
+                  class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
                   class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
@@ -225,17 +278,20 @@
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-regular fa-star"></i></span>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i></span>
                   <span class="text-gray-500 text-sm">(200 avis)</span>
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum dolor.</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum dolor.</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">ALorem, ipsum dolor.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum
+                    dolor.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum
+                    dolor.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">ALorem, ipsum
+                    dolor.</span>
                 </div>
 
                 <p class="text-blue-600 font-bold text-2xl">250000</p>
@@ -244,12 +300,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
-             
+
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
-                <img src="images/img-3.jpeg"
-                  alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+                <img src="images/img-3.jpeg" alt="Samsung Galaxy S25 Ultra"
+                  class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
                   class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
@@ -268,17 +325,20 @@
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-regular fa-star"></i></span>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i></span>
                   <span class="text-gray-500 text-sm">(200 avis)</span>
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem,
+                    ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem,
+                    ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem,
+                    ipsum.</span>
                 </div>
 
                 <p class="text-blue-600 font-bold text-2xl">3500</p>
@@ -287,13 +347,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
-             
+
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
-                <img
-                  src="images/img-6.jpeg"
-                  alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+                <img src="images/img-6.jpeg" alt="Samsung Galaxy S25 Ultra"
+                  class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
                   class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
@@ -312,17 +372,20 @@
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-regular fa-star"></i></span>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i></span>
                   <span class="text-gray-500 text-sm">(200 avis)</span>
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem,
+                    ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem,
+                    ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem,
+                    ipsum.</span>
                 </div>
 
                 <p class="text-blue-600 font-bold text-2xl">350000</p>
@@ -331,13 +394,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
-             
+
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
-                <img
-                  src="images/img-6.jpeg"
-                  alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+                <img src="images/img-6.jpeg" alt="Samsung Galaxy S25 Ultra"
+                  class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
                   class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
@@ -356,10 +419,10 @@
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-regular fa-star"></i></span>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i></span>
                   <span class="text-gray-500 text-sm">(200 avis)</span>
                 </div>
 
@@ -375,13 +438,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
-             
+
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
-                <img
-                  src="images/img-7.jpeg"
-                  alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+                <img src="images/img-7.jpeg" alt="Samsung Galaxy S25 Ultra"
+                  class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
                   class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
@@ -400,17 +463,20 @@
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-regular fa-star"></i></span>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i></span>
                   <span class="text-gray-500 text-sm">(200 avis)</span>
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem,
+                    ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem,
+                    ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem,
+                    ipsum.</span>
                 </div>
 
                 <p class="text-blue-600 font-bold text-2xl">50000</p>
@@ -419,13 +485,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
-             
+
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
-                <img
-                  src="images/img-8.jpeg"
-                  alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+                <img src="images/img-8.jpeg" alt="Samsung Galaxy S25 Ultra"
+                  class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
                   class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
@@ -444,17 +510,20 @@
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-regular fa-star"></i></span>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i></span>
                   <span class="text-gray-500 text-sm">(200 avis)</span>
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">5Lorem, ipsum.</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">AnLorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem,
+                    ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">5Lorem,
+                    ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">AnLorem,
+                    ipsum.</span>
                 </div>
 
                 <p class="text-blue-600 font-bold text-2xl">1500000</p>
@@ -463,13 +532,13 @@
             </div>
 
 
-            <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
+            <div
+              class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 cursor-pointer group overflow-hidden flex flex-col">
 
-             
+
               <div class="relative w-full h-80 bg-blue-50 overflow-hidden flex items-center justify-center p-6">
-                <img
-                  src="images/img-9.jpg"
-                  alt="Samsung Galaxy S25 Ultra" class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
+                <img src="images/img-9.jpg" alt="Samsung Galaxy S25 Ultra"
+                  class="max-w-full max-h-full border border-gray-200 rounded-xl object-cover">
 
                 <div
                   class="flex gap-2 absolute top-3 right-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all">
@@ -488,85 +557,91 @@
 
                 <div class="flex items-center gap-2 mb-3">
                   <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-regular fa-star"></i></span>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i></span>
                   <span class="text-gray-500 text-sm">(200 avis)</span>
                 </div>
 
                 <div class="flex gap-2 mb-4 flex-wrap">
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
-                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem, ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem,
+                    ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem,
+                    ipsum.</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">Lorem,
+                    ipsum.</span>
                 </div>
 
                 <p class="text-blue-600 font-bold text-2xl">6500000</p>
               </div>
 
             </div>
-            
-            
+
+
 
           </div>
         </div>
 
-</section>
+      </section>
 
-</main>
+    </main>
 
-<!--Footer-->
+    <!--Footer-->
 
-<footer class="bg-footer text-noire">
-  
-  <div class="max-w-7xl mx-auto px-6 py-10">
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      
-      <div>
-        <h1 class="text-2xl font-bold mb-3">À propos d'Ebuy</h1>
-        <p class="text-[15px] text-noire">
-          Plateforme e-commerce innovante avec recherche par image et expérience immersive.
+    <footer class="bg-footer text-white bg-gray-900">
+
+      <div class="max-w-7xl mx-auto px-6 py-10">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div>
+            <h1 class="text-2xl font-bold mb-3">À propos d'<span class="text-blue-800">E</span>buy</h1>
+            <p class="text-[15px] text-gray-400">
+              Plateforme e-commerce innovante avec recherche par image et expérience immersive.
+            </p>
+          </div>
+
+          <div>
+            <h1 class="text-2xl font-bold mb-3">Service Client</h1>
+            <p class="text-[15px] text-gray-400">
+              Assistance, retours, livraison et support 24/7.
+            </p>
+          </div>
+
+          <div>
+            <h1 class="text-2xl font-bold mb-3">Liens Rapides</h1>
+            <p class="text-[15px] text-text-gray-400">
+              <a href="index.html">Accueil</a>
+              <a href="#">Catégories</a>
+              <a href="/moctar/inscription.html">Inscription</a>
+            </p>
+          </div>
+
+          <div>
+            <h1 class="text-2xl font-bold mb-3">Suivez-nous</h1>
+            <div class="flex gap-4 mt-3 cursor-pointor">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+
+          </div>
+
+        </div>
+
+        <hr class="my-8 border-gray-600">
+
+        <p class="text-center text-sm text-gray-400">
+          © 2026 Ebuy. Tous droits réservés.
         </p>
-      </div>
-
-      <div>
-        <h1 class="text-2xl font-bold mb-3">Service Client</h1>
-        <p class="text-[15px] text-noire">
-          Assistance, retours, livraison et support 24/7.
-        </p>
-      </div>
-
-      <div>
-        <h1 class="text-2xl font-bold mb-3">Liens Rapides</h1>
-        <p class="text-[15px] text-noire">
-          Produits, catégories, promotions, nouveautés.
-        </p>
-      </div>
-
-      <div>
-        <h1 class="text-2xl font-bold mb-3">Suivez-nous</h1>
-       <div class="flex gap-4 mt-3">
-       <i class="fa-brands fa-facebook"></i>
-       <i class="fa-brands fa-instagram"></i>
-       <i class="fa-brands fa-twitter"></i>
-      </div>
 
       </div>
 
-    </div>
+    </footer>
 
-    <hr class="my-8 border-gray-600">
+    <script src="index.js"></script>
 
-    <p class="text-center text-sm text-gray-400">
-      © 2026 Ebuy. Tous droits réservés.
-    </p>
+  </body>
 
-  </div>
-
-</footer>
-
-<script src="index.js"></script>
-  
-</body>
 </html>

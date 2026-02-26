@@ -10,64 +10,162 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Maison</title>
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .mega-menu {
+      display: none;
+    }
+
+    .has-mega:hover .mega-menu {
+      display: flex;
+    }
+  </style>
 </head>
 
-<body>
- <header class="px-4 py-3 bg-white">
-  <div class="max-w-7xl mx-auto flex flex-col gap-4">
+<body class="bg-gray-50">
+  </head>
 
-    <!-- le Logo et les icones alignent sur meme ligneIcônes -->
-    <div class="flex items-center justify-between md:flex-row">
+  <body>
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center gap-5">
 
-      <!-- Logo -->
-      <div class="text-2xl font-bold text-purple-600">
-        Ebuy
+
+        <a href="#" class="text-2xl font-black text-indigo-600 shrink-0">
+          E<span class="text-gray-800">buy</span>
+        </a>
+
+
+        <nav class="flex items-center gap-1 shrink-0">
+
+          <a href="#"
+            class="px-3 py-2 text-sm font-bold text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">
+            Accueil
+          </a>
+
+
+          <div class="has-mega relative">
+            <button
+              class="flex items-center gap-1.5 px-3 py-2 text-sm font-bold text-indigo-600 hover:bg-indigo-50 rounded-lg transition">
+              Catégories <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+
+            <div
+              class="mega-menu absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-[640px] gap-6 z-50">
+
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center">
+                    <i class="fa-solid fa-mobile text-blue-600 text-xs"></i>
+                  </span>
+                  <a href="/rama/categorie_electroniques.html">
+                    <h3 class="font-black text-gray-800 text-sm">Électronique</h3>
+                  </a>
+                </div>
+                <ul class="space-y-2">
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-indigo-600 hover:font-bold transition block">Smartphones</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-indigo-600 hover:font-bold transition block">Ordinateurs</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-indigo-600 hover:font-bold transition block">Gaming</a>
+                  </li>
+                  <li><a href="#"
+                      class="inline-block mt-1 text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full hover:bg-indigo-100 transition">Voir
+                      tout →</a></li>
+                </ul>
+              </div>
+
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="w-7 h-7 rounded-full bg-pink-100 flex items-center justify-center">
+                    <i class="fa-solid fa-shirt text-pink-500 text-xs"></i>
+                  </span>
+                  <a href="/L&na/categorie_mode.html">
+                    <h3 class="font-black text-gray-800 text-sm">Mode</h3>
+                  </a>
+                </div>
+                <ul class="space-y-2">
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-pink-600 hover:font-bold transition block">Vêtements
+                      Homme</a></li>
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-pink-600 hover:font-bold transition block">Vêtements
+                      Femme</a></li>
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-pink-600 hover:font-bold transition block">Chaussures</a>
+                  </li>
+                  <li><a href="#"
+                      class="inline-block mt-1 text-xs font-bold text-pink-600 bg-pink-50 px-3 py-1 rounded-full hover:bg-pink-100 transition">Voir
+                      tout →</a></li>
+                </ul>
+              </div>
+
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center">
+                    <i class="fa-solid fa-house text-green-600 text-xs"></i>
+                  </span>
+                  <a href="/soulayemane/souley2/categorie_maison.html">
+                    <h3 class="font-black text-gray-800 text-sm">Maison</h3>
+                  </a>
+                </div>
+                <ul class="space-y-2">
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-green-600 hover:font-bold transition block">Décoration</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-green-600 hover:font-bold transition block">Cuisine</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-sm text-gray-500 hover:text-green-600 hover:font-bold transition block">Meubles</a>
+                  </li>
+                  <li><a href="#"
+                      class="inline-block mt-1 text-xs font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full hover:bg-green-100 transition">Voir
+                      tout →</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </nav>
+
+
+        <div
+          class="flex-1 flex items-center bg-gray-100 rounded-full px-4 py-2 gap-2 border border-transparent focus-within:border-indigo-400 focus-within:bg-white transition">
+          <i class="fa-solid fa-magnifying-glass text-gray-400 text-sm"></i>
+          <input type="text" placeholder="Rechercher des produits..."
+            class="bg-transparent w-full text-sm outline-none text-gray-700 placeholder-gray-400" />
+        </div>
+
+
+        <div class="flex items-center gap-3 shrink-0">
+          <button class="text-gray-500 hover:text-indigo-600 transition">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+          <a href="/moctar/panier.html" class="relative text-gray-500 hover:text-indigo-600 transition">
+            <i class="fa-solid fa-cart-shopping text-xl"></i>
+            <span
+              class="absolute -top-2 -right-2 bg-indigo-600 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">2</span>
+          </a>
+          <a href="/moctar/panier.html"
+            class="px-4 py-1.5 border border-gray-300 rounded-lg text-sm font-bold text-gray-600 hover:border-indigo-500 hover:text-indigo-600 transition">
+            Connexion
+          </a>
+          <a href="/moctar/panier.html"
+            class="px-4 py-1.5 bg-indigo-600 text-white text-sm font-bold rounded-lg hover:bg-indigo-700 transition">
+            Inscription
+          </a>
+        </div>
+
       </div>
-
-      <!-- Icônes -->
-      <div class="flex items-center gap-4">
-
-        <i class="fa-regular fa-heart text-xl cursor-pointer"></i>
-
-        <a href="moctar/panier.html">
-          <i class="fa-solid fa-cart-shopping text-xl cursor-pointer"></i>
-        </a>
-
-        <a 
-          href="moctar/connexion.html"
-          class="px-4 py-2 border border-gray-300 rounded-lg font-medium hover:bg-bleu hover:text-white transition duration-300">
-          Connexion
-        </a>
-
-        <a 
-          href="moctar/inscription.html"
-          class="px-4 py-2 bg-bleu text-white font-medium rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition duration-300">
-          Inscription
-        </a>
-
-      </div>
-    </div>
-
-    <!-- Barre de recherche -->
-    <nav class="flex items-center bg-white border rounded-full px-4 py-2 w-full md:w-1/2 md:mx-auto">
-      <i class="fa-solid fa-magnifying-glass text-gray-500 mr-2"></i>
-      <input 
-        type="text" 
-        placeholder="Rechercher des produits..."
-        class="w-full outline-none bg-transparent">
-    </nav>
-
-  </div>
-</header>
-  <main>
-   <div class="flex gap-6">
-      <a href="../../index.html">Tout</a>
-      <a href="../../rama/categorie_electroniques.html">Electronique</a>
-       <a href="../../L&na/categorie_mode.html">Mode</a>
-      <a href="categorie_maison.html">Maison</a>
-      <a href="../../fatoumata/categorie_loisir_sport.html">Sport</a>
-    </div>
+    </header>
     <!-- partie de souleymane-->
 
 
@@ -466,54 +564,57 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-footer text-noire">
+  <footer class="bg-footer text-white bg-gray-900">
 
-    <div class="max-w-7xl mx-auto px-6 py-10">
+      <div class="max-w-7xl mx-auto px-6 py-10">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-        <div>
-          <h1 class="text-2xl font-bold mb-3">À propos d'Ebuy</h1>
-          <p class="text-[15px] text-noire">
-            Plateforme e-commerce innovante avec recherche par image et expérience immersive.
-          </p>
-        </div>
+          <div>
+            <h1 class="text-2xl font-bold mb-3">À propos d'<span class="text-blue-800">E</span>buy</h1>
+            <p class="text-[15px] text-gray-400">
+              Plateforme e-commerce innovante avec recherche par image et expérience immersive.
+            </p>
+          </div>
 
-        <div>
-          <h1 class="text-2xl font-bold mb-3">Service Client</h1>
-          <p class="text-[15px] text-noire">
-            Assistance, retours, livraison et support 24/7.
-          </p>
-        </div>
+          <div>
+            <h1 class="text-2xl font-bold mb-3">Service Client</h1>
+            <p class="text-[15px] text-gray-400">
+              Assistance, retours, livraison et support 24/7.
+            </p>
+          </div>
 
-        <div>
-          <h1 class="text-2xl font-bold mb-3">Liens Rapides</h1>
-          <p class="text-[15px] text-noire">
-            Produits, catégories, promotions, nouveautés.
-          </p>
-        </div>
+          <div>
+            <h1 class="text-2xl font-bold mb-3">Liens Rapides</h1>
+            <p class="text-[15px] text-text-gray-400">
+              <a href="index.html">Accueil</a>
+              <a href="#">Catégories</a>
+              <a href="/moctar/inscription.html">Inscription</a>
+            </p>
+          </div>
 
-        <div>
-          <h1 class="text-2xl font-bold mb-3">Suivez-nous</h1>
-          <div class="flex gap-4 mt-3">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
+          <div>
+            <h1 class="text-2xl font-bold mb-3">Suivez-nous</h1>
+            <div class="flex gap-4 mt-3 cursor-pointor">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+
           </div>
 
         </div>
 
+        <hr class="my-8 border-gray-600">
+
+        <p class="text-center text-sm text-gray-400">
+          © 2026 Ebuy. Tous droits réservés.
+        </p>
+
       </div>
 
-      <hr class="my-8 border-gray-600">
+    </footer>
 
-      <p class="text-center text-sm text-gray-400">
-        © 2026 Ebuy. Tous droits réservés.
-      </p>
-
-    </div>
-
-  </footer>
   <script src="../../index.js"></script>
 
 </body>
